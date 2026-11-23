@@ -2,7 +2,10 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, Literal, Protocol, runtime_checkable
+from typing import TYPE_CHECKING, Any, Literal, Protocol, runtime_checkable
+
+if TYPE_CHECKING:  # the checker imports this module, so only type checkers import it back
+    from app.checker import Trigger
 
 # Tools that change world state. These count against the action cap; the read tools do not.
 WRITE_TOOLS = ("move", "pick", "drop", "use")
@@ -71,6 +74,38 @@ class LLMResult:
     model_version: str = ""
 
 
+# The plan-based loops: "remaining" is adaptive replanning, "step" is local repair.
+RevisionScope = Literal["remaining", "step"]
+PlanKind = Literal["initial", "rewrite", "repair"]
+
+
+@dataclass
+class PlanVersion:
+    """One version of the plan (M4). `steps` is the whole plan as it stood once this version
+    was made, each step as a dict, and `start` the first step it changed. `llm_calls` indexes
+    the calls in EpisodeOutcome.llm_calls that produced it, a retry included."""
+
+    version: int
+    kind: PlanKind
+    start: int
+    steps: list[dict[str, Any]]
+    reasoning: str = ""
+    warnings: list[str] = field(default_factory=list)
+    llm_calls: list[int] = field(default_factory=list)
+
+
+@dataclass
+class RevisionEvent:
+    """One replan or repair (M4): what set it off, and the plan version it produced.
+    `write_cap` is the repair cap applied, and `cut` the steps the cap removed."""
+
+    trigger: Trigger
+    scope: RevisionScope
+    plan_version: int
+    write_cap: int | None = None
+    cut: int = 0
+
+
 @dataclass
 class EpisodeOutcome:
     """What a loop returns when an episode stops, the two lists holding its calls in order.
@@ -84,6 +119,9 @@ class EpisodeOutcome:
     wall_clock_s: float = 0.0
     error: str | None = None
     success: bool | None = None
+    # Filled by the plan-based loops only; ReAct leaves them empty.
+    plans: list[PlanVersion] = field(default_factory=list)
+    revisions: list[RevisionEvent] = field(default_factory=list)
 
 
 @runtime_checkable

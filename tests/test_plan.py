@@ -118,7 +118,15 @@ def test_schema_follows_the_tool_definitions():
     step_schema = schema["properties"]["steps"]["items"]
     assert step_schema["properties"]["tool"]["enum"] == [t["function"]["name"] for t in TOOLS]
     assert set(step_schema["properties"]["args"]["properties"]) == {"location", "item", "station", "items"}
-    precondition = step_schema["properties"]["preconditions"]["items"]
-    assert precondition["properties"]["type"]["enum"] == list(PRECONDITION_FIELDS)
-    assert {"location", "item", "from", "to", "station"} <= set(precondition["properties"])
+    variants = step_schema["properties"]["preconditions"]["items"]["anyOf"]
+    assert [v["properties"]["type"]["enum"] for v in variants] == [[kind] for kind in PRECONDITION_FIELDS]
+    for variant, (kind, names) in zip(variants, PRECONDITION_FIELDS.items()):
+        assert variant["required"] == ["type", *names]  # each type requires its own fields
+        assert set(variant["properties"]) == {"type", *names}
     assert schema["required"] == ["steps"]
+
+
+def test_missing_field_error_shows_what_was_sent():
+    bad = {"type": "item_at", "item": "bulb", "to": "shop"}
+    with pytest.raises(PlanError, match=r'item_at needs a location; got \{"type": "item_at", "item": "bulb", "to": "shop"\}'):
+        parse_plan(reply(step("pick", {"item": "bulb"}, [bad])), TOOLS)

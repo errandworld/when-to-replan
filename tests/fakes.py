@@ -83,3 +83,22 @@ class FakeToolClient:
     @property
     def write_calls(self) -> list[ToolCall]:
         return [c for c in self.calls if c.name in WRITE_TOOLS]
+
+
+class RecordingLLM(FakeLLM):
+    """FakeLLM that also keeps the response format of each call, and copies the messages, so a
+    caller that extends its message list afterwards does not change what was recorded."""
+
+    def __init__(self, replies: list[Any], model_version: str = "fake-model-0"):
+        super().__init__(replies, model_version)
+        self.formats: list[Any] = []  # response_format passed to each call
+
+    def complete(
+        self,
+        messages: list[dict[str, Any]],
+        *,
+        tools: list[dict[str, Any]] | None = None,
+        response_format: Any | None = None,
+    ) -> LLMResult:
+        self.formats.append(response_format)
+        return super().complete(list(messages), tools=tools, response_format=response_format)

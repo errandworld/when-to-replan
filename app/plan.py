@@ -68,32 +68,32 @@ def plan_schema(tool_definitions: list[dict[str, Any]]) -> dict[str, Any]:
     """The JSON schema of a plan reply, built from the tool definitions the server lists.
 
     A step's args take the union of every tool's parameters, because some providers reject
-    per-tool variants; parse_plan then checks each step against its own tool.
+    per-tool variants; parse_plan then checks each step against its own tool. Preconditions
+    are one variant per type, each requiring its own fields: with a single shared object,
+    constrained decoding let models write a field from another type (item_at with "to").
     """
     arg_properties: dict[str, Any] = {}
     for definition in tool_definitions:
         arg_properties.update(_parameters(definition).get("properties", {}))
 
-    precondition_properties: dict[str, Any] = {
-        "type": {"type": "string", "enum": list(PRECONDITION_FIELDS)}
-    }
-    for names in PRECONDITION_FIELDS.values():
-        for name in names:
-            precondition_properties[name] = {"type": "string"}
+    precondition_variants = [
+        {
+            "type": "object",
+            "properties": {
+                "type": {"type": "string", "enum": [kind]},
+                **{name: {"type": "string"} for name in names},
+            },
+            "required": ["type", *names],
+        }
+        for kind, names in PRECONDITION_FIELDS.items()
+    ]
 
     step = {
         "type": "object",
         "properties": {
             "tool": {"type": "string", "enum": [_name(d) for d in tool_definitions]},
             "args": {"type": "object", "properties": arg_properties},
-            "preconditions": {
-                "type": "array",
-                "items": {
-                    "type": "object",
-                    "properties": precondition_properties,
-                    "required": ["type"],
-                },
-            },
+            "preconditions": {"type": "array", "items": {"anyOf": precondition_variants}},
         },
         "required": ["tool", "args", "preconditions"],
     }
@@ -172,7 +172,7 @@ def _parse_precondition(raw: Any, where: str) -> Precondition:
     for name in PRECONDITION_FIELDS[kind]:
         value = raw.get(name)
         if not isinstance(value, str) or not value.strip():
-            raise PlanError(f"{where}: precondition {kind} needs a {name}")
+            raise PlanError(f"{where}: precondition {kind} needs a {name}; got {json.dumps(raw)}")
         values[name] = value.strip()
     return Precondition(type=kind, args=values)
 
