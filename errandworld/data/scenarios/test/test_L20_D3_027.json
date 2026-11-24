@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "id": "test_L20_D3_027",
+  "seed": 880185712,
+  "set_name": "test",
+  "length_level": 20,
+  "disruption_level": 3,
+  "capacity": 3,
+  "start_location": "juniper",
+  "optimal_actions": 22,
+  "total_subgoals": 10,
+  "reference_actions": 30,
+  "map": {
+    "id": "test_map_3",
+    "seed": 2003,
+    "locations": [
+      {
+        "id": "birchwood",
+        "name": "Birchwood"
+      },
+      {
+        "id": "dunmore",
+        "name": "Dunmore"
+      },
+      {
+        "id": "eastbrook",
+        "name": "Eastbrook"
+      },
+      {
+        "id": "fairview",
+        "name": "Fairview"
+      },
+      {
+        "id": "glenhaven",
+        "name": "Glenhaven"
+      },
+      {
+        "id": "highfield",
+        "name": "Highfield"
+      },
+      {
+        "id": "juniper",
+        "name": "Juniper"
+      },
+      {
+        "id": "millbrook",
+        "name": "Millbrook"
+      },
+      {
+        "id": "oakridge",
+        "name": "Oakridge"
+      },
+      {
+        "id": "pinecrest",
+        "name": "Pinecrest"
+      },
+      {
+        "id": "riverton",
+        "name": "Riverton"
+      },
+      {
+        "id": "stonehill",
+        "name": "Stonehill"
+      },
+      {
+        "id": "thornbury",
+        "name": "Thornbury"
+      },
+      {
+        "id": "yarrow",
+        "name": "Yarrow"
+      },
+      {
+        "id": "zephyr",
+        "name": "Zephyr"
+      }
+    ],
+    "roads": [
+      {
+        "a": "birchwood",
+        "b": "highfield",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "stonehill",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "dunmore",
+        "b": "stonehill",
+        "open": true
+      },
+      {
+        "a": "dunmore",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "juniper",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "fairview",
+        "b": "millbrook",
+        "open": true
+      },
+      {
+        "a": "fairview",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "glenhaven",
+        "b": "juniper",
+        "open": true
+      },
+      {
+        "a": "glenhaven",
+        "b": "oakridge",
+        "open": true
+      },
+      {
+        "a": "highfield",
+        "b": "oakridge",
+        "open": true
+      },
+      {
+        "a": "juniper",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "juniper",
+        "b": "zephyr",
+        "open": true
+      },
+      {
+        "a": "millbrook",
+        "b": "pinecrest",
+        "open": true
+      },
+      {
+        "a": "pinecrest",
+        "b": "zephyr",
+        "open": true
+      },
+      {
+        "a": "thornbury",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "thornbury",
+        "b": "zephyr",
+        "open": true
+      }
+    ],
+    "stations": [
+      {
+        "id": "oven_1",
+        "type": "oven",
+        "location": "oakridge",
+        "online": true
+      },
+      {
+        "id": "oven_2",
+        "type": "oven",
+        "location": "dunmore",
+        "online": true
+      },
+      {
+        "id": "print_shop_1",
+        "type": "print_shop",
+        "location": "highfield",
+        "online": true
+      },
+      {
+        "id": "print_shop_2",
+        "type": "print_shop",
+        "location": "riverton",
+        "online": true
+      },
+      {
+        "id": "repair_bench_1",
+        "type": "repair_bench",
+        "location": "eastbrook",
+        "online": true
+      },
+      {
+        "id": "repair_bench_2",
+        "type": "repair_bench",
+        "location": "juniper",
+        "online": true
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "radio_shell_1",
+      "type": "radio_shell",
+      "location": "fairview"
+    },
+    {
+      "id": "battery_1",
+      "type": "battery",
+      "location": "riverton"
+    },
+    {
+      "id": "lamp_base_1",
+      "type": "lamp_base",
+      "location": "fairview"
+    },
+    {
+      "id": "sugar_1",
+      "type": "sugar",
+      "location": "juniper"
+    },
+    {
+      "id": "eggs_1",
+      "type": "eggs",
+      "location": "eastbrook"
+    },
+    {
+      "id": "frame_1",
+      "type": "frame",
+      "location": "juniper"
+    },
+    {
+      "id": "paper_1",
+      "type": "paper",
+      "location": "highfield"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job_1",
+      "kind": "craft",
+      "target_type": "radio",
+      "destination": "juniper",
+      "depends_on": []
+    },
+    {
+      "id": "job_2",
+      "kind": "deliver",
+      "target_type": "lamp_base",
+      "destination": "riverton",
+      "depends_on": []
+    },
+    {
+      "id": "job_3",
+      "kind": "craft",
+      "target_type": "cake",
+      "destination": "fairview",
+      "depends_on": []
+    }
+  ],
+  "schedule": [
+    {
+      "index": 0,
+      "type": "stale_map",
+      "trigger_subgoal": 2
+    },
+    {
+      "index": 1,
+      "type": "moved_item",
+      "trigger_subgoal": 5
+    },
+    {
+      "index": 2,
+      "type": "station_offline",
+      "trigger_subgoal": 8
+    }
+  ],
+  "metadata": {
+    "generator_version": 4,
+    "attempt": 6,
+    "rejections": {
+      "too_long": 6
+    },
+    "radius": 2,
+    "composition": {
+      "jobs": 3,
+      "deliver": 1,
+      "craft": 2,
+      "dependent": 0
+    },
+    "solve_seconds_total": 0.322,
+    "solve_expanded": 2454,
+    "disruption_order_changed": true,
+    "reference_replay": [
+      {
+        "index": 0,
+        "type": "stale_map",
+        "target": "item:lamp_base_1",
+        "cost_before": 19,
+        "cost_after": 21,
+        "affected_jobs": [
+          "job_2"
+        ]
+      },
+      {
+        "index": 1,
+        "type": "moved_item",
+        "target": "item:radio_shell_1",
+        "cost_before": 9,
+        "cost_after": 13,
+        "affected_jobs": [
+          "job_1"
+        ]
+      },
+      {
+        "index": 2,
+        "type": "station_offline",
+        "target": "station:repair_bench_2",
+        "cost_before": 4,
+        "cost_after": 6,
+        "affected_jobs": [
+          "job_1"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,441 @@
+{
+  "set": "pilot",
+  "generator_version": 4,
+  "n_scenarios": 45,
+  "disruption_types": {
+    "moved_item": 15,
+    "road_closure": 14,
+    "stale_map": 14,
+    "station_offline": 17
+  },
+  "cells": {
+    "L10_D0": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 9,
+        "median": 10,
+        "max": 10,
+        "mean": 9.6
+      },
+      "craft_share": 0.5,
+      "dependent_jobs": 0,
+      "attempts_total": 12,
+      "rejections": {
+        "too_long": 7
+      },
+      "disruption_types": {},
+      "maps": {
+        "test_map_1": 1,
+        "test_map_2": 1,
+        "test_map_3": 1,
+        "test_map_4": 1,
+        "test_map_5": 1
+      }
+    },
+    "L10_D1": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 9,
+        "median": 10,
+        "max": 11,
+        "mean": 10
+      },
+      "craft_share": 0.5,
+      "dependent_jobs": 0,
+      "attempts_total": 27,
+      "rejections": {
+        "schedule_replay": 1,
+        "too_long": 21
+      },
+      "disruption_types": {
+        "moved_item": 1,
+        "road_closure": 1,
+        "stale_map": 1,
+        "station_offline": 2
+      },
+      "maps": {
+        "test_map_1": 1,
+        "test_map_2": 1,
+        "test_map_3": 1,
+        "test_map_4": 1,
+        "test_map_5": 1
+      }
+    },
+    "L10_D3": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 10,
+        "median": 11,
+        "max": 11,
+        "mean": 10.6
+      },
+      "craft_share": 0.5,
+      "dependent_jobs": 0,
+      "attempts_total": 28,
+      "rejections": {
+        "schedule_replay": 3,
+        "too_long": 17,
+        "too_short": 3
+      },
+      "disruption_types": {
+        "moved_item": 4,
+        "road_closure": 4,
+        "stale_map": 3,
+        "station_offline": 4
+      },
+      "maps": {
+        "test_map_1": 1,
+        "test_map_2": 1,
+        "test_map_3": 1,
+        "test_map_4": 1,
+        "test_map_5": 1
+      }
+    },
+    "L20_D0": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 19,
+        "median": 20,
+        "max": 22,
+        "mean": 20.6
+      },
+      "craft_share": 0.467,
+      "dependent_jobs": 0,
+      "attempts_total": 6,
+      "rejections": {
+        "too_long": 1
+      },
+      "disruption_types": {},
+      "maps": {
+        "test_map_1": 1,
+        "test_map_2": 1,
+        "test_map_3": 1,
+        "test_map_4": 1,
+        "test_map_5": 1
+      }
+    },
+    "L20_D1": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 19,
+        "median": 22,
+        "max": 22,
+        "mean": 21.2
+      },
+      "craft_share": 0.467,
+      "dependent_jobs": 0,
+      "attempts_total": 11,
+      "rejections": {
+        "schedule_replay": 2,
+        "too_long": 2,
+        "too_short": 2
+      },
+      "disruption_types": {
+        "moved_item": 1,
+        "road_closure": 1,
+        "stale_map": 1,
+        "station_offline": 2
+      },
+      "maps": {
+        "test_map_1": 1,
+        "test_map_2": 1,
+        "test_map_3": 1,
+        "test_map_4": 1,
+        "test_map_5": 1
+      }
+    },
+    "L20_D3": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 18,
+        "median": 22,
+        "max": 22,
+        "mean": 21
+      },
+      "craft_share": 0.467,
+      "dependent_jobs": 0,
+      "attempts_total": 20,
+      "rejections": {
+        "schedule_replay": 10,
+        "too_long": 4,
+        "too_short": 1
+      },
+      "disruption_types": {
+        "moved_item": 4,
+        "road_closure": 3,
+        "stale_map": 4,
+        "station_offline": 4
+      },
+      "maps": {
+        "test_map_1": 1,
+        "test_map_2": 1,
+        "test_map_3": 1,
+        "test_map_4": 1,
+        "test_map_5": 1
+      }
+    },
+    "L30_D0": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 28,
+        "median": 29,
+        "max": 32,
+        "mean": 29.4
+      },
+      "craft_share": 0.5,
+      "dependent_jobs": 0,
+      "attempts_total": 8,
+      "rejections": {
+        "too_short": 3
+      },
+      "disruption_types": {},
+      "maps": {
+        "test_map_1": 1,
+        "test_map_2": 1,
+        "test_map_3": 1,
+        "test_map_4": 1,
+        "test_map_5": 1
+      }
+    },
+    "L30_D1": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 27,
+        "median": 28,
+        "max": 31,
+        "mean": 28.4
+      },
+      "craft_share": 0.5,
+      "dependent_jobs": 0,
+      "attempts_total": 8,
+      "rejections": {
+        "too_short": 3
+      },
+      "disruption_types": {
+        "moved_item": 1,
+        "road_closure": 1,
+        "stale_map": 1,
+        "station_offline": 2
+      },
+      "maps": {
+        "test_map_1": 1,
+        "test_map_2": 1,
+        "test_map_3": 1,
+        "test_map_4": 1,
+        "test_map_5": 1
+      }
+    },
+    "L30_D3": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 27,
+        "median": 27,
+        "max": 30,
+        "mean": 28.2
+      },
+      "craft_share": 0.5,
+      "dependent_jobs": 0,
+      "attempts_total": 10,
+      "rejections": {
+        "schedule_replay": 4,
+        "too_short": 1
+      },
+      "disruption_types": {
+        "moved_item": 4,
+        "road_closure": 4,
+        "stale_map": 4,
+        "station_offline": 3
+      },
+      "maps": {
+        "test_map_1": 1,
+        "test_map_2": 1,
+        "test_map_3": 1,
+        "test_map_4": 1,
+        "test_map_5": 1
+      }
+    }
+  },
+  "generation_seconds": 8.6,
+  "scenarios": {
+    "pilot_L10_D0_000": {
+      "fingerprint": "2b6ecfe58f280f7e3051a24c2c79fae273eab8ed86202fb60346d5549f34d5a3",
+      "content_key": "9a53292014b1afc0"
+    },
+    "pilot_L10_D0_001": {
+      "fingerprint": "d4749a9814e070012ce62ae13b4ba6645a4aa569d547f73fc98a6fb6897e91d2",
+      "content_key": "8a8ec3a9977484ad"
+    },
+    "pilot_L10_D0_002": {
+      "fingerprint": "26eb21b9a7bba2046755a66a13b03e190da9e21f553ed42948881f37fed41689",
+      "content_key": "7a9be56d2104e586"
+    },
+    "pilot_L10_D0_003": {
+      "fingerprint": "790a8c6c0a20bcb00b3308393c701ece53d7a1bf7b5fd65de907996266878159",
+      "content_key": "558cde5a4ad81afa"
+    },
+    "pilot_L10_D0_004": {
+      "fingerprint": "a0d0c37f3b4d89b91e3b20cbeca88af29789ed2efdb97dc93ff256344198136c",
+      "content_key": "3c0a330c00024d0d"
+    },
+    "pilot_L10_D1_000": {
+      "fingerprint": "41c6fda04eec0ad476f62ac89eed9e72f10efc9d0272e8c4d988b450bb155f08",
+      "content_key": "bc6c1b09c4a31074"
+    },
+    "pilot_L10_D1_001": {
+      "fingerprint": "395b822c2bfda3308a9916dd53d7c82ccfae059dddffcc9265588ff2fb7d24ae",
+      "content_key": "8b3a452880ddf28f"
+    },
+    "pilot_L10_D1_002": {
+      "fingerprint": "5e604df1b426402dc758e2a7f046fa3034240050bc7cc122a63d3b959d020fa0",
+      "content_key": "3da9ae71a37f39cc"
+    },
+    "pilot_L10_D1_003": {
+      "fingerprint": "0d46d09f1561014eaf9565e4e0ee50febbcfbdf443a7f209d194d5b15d9ba2fb",
+      "content_key": "1fc7304f33c95b0b"
+    },
+    "pilot_L10_D1_004": {
+      "fingerprint": "b900205e2170a18b87eddd62d810d14f5c1735ffe8e3e7b07a2d68faf75e952d",
+      "content_key": "f5e2ebbeeca753b2"
+    },
+    "pilot_L10_D3_000": {
+      "fingerprint": "5539806103359ddae8d8acc7f100094f3a48c8b2612d03f2c7f745aacf40c70f",
+      "content_key": "0ff90fafb296995c"
+    },
+    "pilot_L10_D3_001": {
+      "fingerprint": "f537ebfd117a8b9b2a196016a95a099129e6e41a8bf55e6955a9fc79ed3c9e2f",
+      "content_key": "8ba74bce7e269d69"
+    },
+    "pilot_L10_D3_002": {
+      "fingerprint": "b937afc0870d4aad7edb1d0b6fb19877894248854d9e558df51eaed44adad89c",
+      "content_key": "2b4d15c105fcc2a8"
+    },
+    "pilot_L10_D3_003": {
+      "fingerprint": "5875e58356a78dc5c402bfe912d2a12eb5fa7b2227499de16712e3cf7a711e91",
+      "content_key": "202e22bfb36881a2"
+    },
+    "pilot_L10_D3_004": {
+      "fingerprint": "44a2fe418e7fa209acf6bbdf5ff257653b8084f382e68caf6e574a56b4e46b45",
+      "content_key": "9f70308c7729613d"
+    },
+    "pilot_L20_D0_000": {
+      "fingerprint": "f615583e87dc9036ed5b5ba61fdc902b4d6e6569637093c3a82f414c4593a599",
+      "content_key": "bd47db5724ebc92c"
+    },
+    "pilot_L20_D0_001": {
+      "fingerprint": "ea54451f605144ab4e9db3b3c8d28fc552ee286a0d017486ae69f36b718900ab",
+      "content_key": "2bfb98b9cdb76e5d"
+    },
+    "pilot_L20_D0_002": {
+      "fingerprint": "47f3c9975fd0e39fc8da641b687bd8da3897c66c81b5111c22f437f64a1ba816",
+      "content_key": "4bc40b5c85d40f22"
+    },
+    "pilot_L20_D0_003": {
+      "fingerprint": "3f651e7cf07916753c65ac78ecc2aa438a4361faf4f0d7efbc8964cb9efc8cbf",
+      "content_key": "839ed318e5173661"
+    },
+    "pilot_L20_D0_004": {
+      "fingerprint": "f502f9549bb232b2b7a5215fa23a73ebbb01264b83a5c495491a1bd533070a9f",
+      "content_key": "9a61c7fc256574b7"
+    },
+    "pilot_L20_D1_000": {
+      "fingerprint": "553be14b5c35d1540bbf6f4bc9ef9cc7eec39319a5eb57c2b4e90c4eba236cd1",
+      "content_key": "8b7c6b91ba26152f"
+    },
+    "pilot_L20_D1_001": {
+      "fingerprint": "7bb7a99a7d5664794bb53c65b1e131ef5f001ce1fd84d67f53abb1bfdb6fc847",
+      "content_key": "9fd47a454788126f"
+    },
+    "pilot_L20_D1_002": {
+      "fingerprint": "321592652460b509bb0b9f4617c031885dde3c57a66c8002993bee08db74d766",
+      "content_key": "7d3727cf331bda3c"
+    },
+    "pilot_L20_D1_003": {
+      "fingerprint": "b017b3b532b25a8744a46bc2fe5f882443c989385ee97bfd9447343857357b7e",
+      "content_key": "597caad2d0607cdf"
+    },
+    "pilot_L20_D1_004": {
+      "fingerprint": "af7c960b3b30daafd4e860e058a7a1f43c04ffcb9c973fe88a9d5fff429fd89b",
+      "content_key": "54068dda9b862d8e"
+    },
+    "pilot_L20_D3_000": {
+      "fingerprint": "22acb6729a23091a6b1d97eb0ef748c4e62445e31444992cf72fc25a0156fef3",
+      "content_key": "e1403ce04fde1a7a"
+    },
+    "pilot_L20_D3_001": {
+      "fingerprint": "6c40335eb5d5c1fd5d63a4a23688edf7856315c18c7bb00e464ebb561ecfbbd7",
+      "content_key": "ea1052b460b5c8f1"
+    },
+    "pilot_L20_D3_002": {
+      "fingerprint": "7a819cd835f42821d19f97231bd7d541d85f3775f89650f5023031a928fad5ed",
+      "content_key": "4320c7a4ba6ef2f2"
+    },
+    "pilot_L20_D3_003": {
+      "fingerprint": "79e15cf2d58cca3893ada39767ed5edc3e5e94eeed2c3e24fcff70d0285d3b04",
+      "content_key": "74b890d22c17b78a"
+    },
+    "pilot_L20_D3_004": {
+      "fingerprint": "e650a48f80aea9e557b4b282e54536a5f64eb57a3b4dcfc741f2524c71c16b89",
+      "content_key": "1eb6d32442967ede"
+    },
+    "pilot_L30_D0_000": {
+      "fingerprint": "0c0162b621be435c26077fb982530f2c6dceeccdc690f1d10a5cf68560f11735",
+      "content_key": "3285cb7eb2891717"
+    },
+    "pilot_L30_D0_001": {
+      "fingerprint": "7d78c4ca4e05e1ed9482a056aad67b7074818e81a50167f273d8a8ed56fb5f2c",
+      "content_key": "d435cbcad7bc3f1e"
+    },
+    "pilot_L30_D0_002": {
+      "fingerprint": "f6c22b7324490fb111853b632ee49e2c26066c1362bacd968f238502fcdd1f3c",
+      "content_key": "cafac55fd607b272"
+    },
+    "pilot_L30_D0_003": {
+      "fingerprint": "76260f4b5a9f9a7f194a8596d8c30a89cd836821f7d453c0ef7f3e304b1940c4",
+      "content_key": "05792e623d3ab771"
+    },
+    "pilot_L30_D0_004": {
+      "fingerprint": "de3cc3fa1149f6464c513e8425c0b2edf8b06f77ea3c9e55c79fd88126c41e2c",
+      "content_key": "925d832305981948"
+    },
+    "pilot_L30_D1_000": {
+      "fingerprint": "35ee022241483cfa94db0fe9c69643d9be3f1cfa4104d51d6f17a626876e8040",
+      "content_key": "c203a99e5ba742de"
+    },
+    "pilot_L30_D1_001": {
+      "fingerprint": "72834ecb3b2cb4eb4948e55d8f4392e9c020fa30c0fabc2440f8e9c57976e7a4",
+      "content_key": "4a662837bc94e303"
+    },
+    "pilot_L30_D1_002": {
+      "fingerprint": "6b496bb27c2db75ade87a9ddab384d24f41d15c04bda96eef1caf323c3351ddb",
+      "content_key": "fedc7b5876863cf0"
+    },
+    "pilot_L30_D1_003": {
+      "fingerprint": "18ada7104dd20c276b0abedbcedbacfb71c6d5439ec0a4dda1dd59f65dac1917",
+      "content_key": "af98c3964554776d"
+    },
+    "pilot_L30_D1_004": {
+      "fingerprint": "f6dc41b43c877a7406adcd2538fc06c48c3a4d4a89297305f450bf99cb6fc368",
+      "content_key": "65e931eae877f9cb"
+    },
+    "pilot_L30_D3_000": {
+      "fingerprint": "9cd1a4c198a1a00dce5d9d33fb0b95751fa5e7018e9dbc91ca186445736cc057",
+      "content_key": "7ecb8b8852d249dd"
+    },
+    "pilot_L30_D3_001": {
+      "fingerprint": "f790dabb9efe9b9498ed8a4cfa60e5ba862ac2f85c0b1874f231ac1a0cea3701",
+      "content_key": "8dc3107f2c4864c3"
+    },
+    "pilot_L30_D3_002": {
+      "fingerprint": "bcdc46acdc06aa4bfb35b1f3ba2541ffaed6a33ea142f7be3171ec887a6bf244",
+      "content_key": "3720b3758d0c2c87"
+    },
+    "pilot_L30_D3_003": {
+      "fingerprint": "52d518132b7337ed103cfb08b7971f806d54f0f38c1af6f2bfbf1f0c3e5740f0",
+      "content_key": "de1df5018f1b7b51"
+    },
+    "pilot_L30_D3_004": {
+      "fingerprint": "1dd115a3b0d0015acfa9621cfb8cbb7aecd36a5e7d817eee87c969469cefdc1e",
+      "content_key": "1faed663e03a8018"
+    }
+  }
+}

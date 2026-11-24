@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "id": "dev_L30_D1_003",
+  "seed": 803335968,
+  "set_name": "dev",
+  "length_level": 30,
+  "disruption_level": 1,
+  "capacity": 3,
+  "start_location": "stonehill",
+  "optimal_actions": 33,
+  "total_subgoals": 12,
+  "reference_actions": 35,
+  "map": {
+    "id": "dev_map_2",
+    "seed": 1002,
+    "locations": [
+      {
+        "id": "birchwood",
+        "name": "Birchwood"
+      },
+      {
+        "id": "eastbrook",
+        "name": "Eastbrook"
+      },
+      {
+        "id": "glenhaven",
+        "name": "Glenhaven"
+      },
+      {
+        "id": "highfield",
+        "name": "Highfield"
+      },
+      {
+        "id": "ironbridge",
+        "name": "Ironbridge"
+      },
+      {
+        "id": "juniper",
+        "name": "Juniper"
+      },
+      {
+        "id": "kingsley",
+        "name": "Kingsley"
+      },
+      {
+        "id": "northgate",
+        "name": "Northgate"
+      },
+      {
+        "id": "pinecrest",
+        "name": "Pinecrest"
+      },
+      {
+        "id": "queensway",
+        "name": "Queensway"
+      },
+      {
+        "id": "riverton",
+        "name": "Riverton"
+      },
+      {
+        "id": "stonehill",
+        "name": "Stonehill"
+      },
+      {
+        "id": "thornbury",
+        "name": "Thornbury"
+      },
+      {
+        "id": "westvale",
+        "name": "Westvale"
+      },
+      {
+        "id": "yarrow",
+        "name": "Yarrow"
+      }
+    ],
+    "roads": [
+      {
+        "a": "birchwood",
+        "b": "kingsley",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "juniper",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "glenhaven",
+        "b": "highfield",
+        "open": true
+      },
+      {
+        "a": "glenhaven",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "highfield",
+        "b": "queensway",
+        "open": true
+      },
+      {
+        "a": "ironbridge",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "ironbridge",
+        "b": "westvale",
+        "open": true
+      },
+      {
+        "a": "juniper",
+        "b": "northgate",
+        "open": true
+      },
+      {
+        "a": "kingsley",
+        "b": "queensway",
+        "open": true
+      },
+      {
+        "a": "northgate",
+        "b": "queensway",
+        "open": true
+      },
+      {
+        "a": "northgate",
+        "b": "stonehill",
+        "open": true
+      },
+      {
+        "a": "pinecrest",
+        "b": "stonehill",
+        "open": true
+      },
+      {
+        "a": "pinecrest",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "pinecrest",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "stonehill",
+        "b": "westvale",
+        "open": true
+      }
+    ],
+    "stations": [
+      {
+        "id": "oven_1",
+        "type": "oven",
+        "location": "westvale",
+        "online": true
+      },
+      {
+        "id": "oven_2",
+        "type": "oven",
+        "location": "stonehill",
+        "online": true
+      },
+      {
+        "id": "print_shop_1",
+        "type": "print_shop",
+        "location": "ironbridge",
+        "online": true
+      },
+      {
+        "id": "print_shop_2",
+        "type": "print_shop",
+        "location": "yarrow",
+        "online": true
+      },
+      {
+        "id": "repair_bench_1",
+        "type": "repair_bench",
+        "location": "riverton",
+        "online": true
+      },
+      {
+        "id": "repair_bench_2",
+        "type": "repair_bench",
+        "location": "thornbury",
+        "online": true
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "sugar_1",
+      "type": "sugar",
+      "location": "juniper"
+    },
+    {
+      "id": "eggs_1",
+      "type": "eggs",
+      "location": "eastbrook"
+    },
+    {
+      "id": "bulb_1",
+      "type": "bulb",
+      "location": "yarrow"
+    },
+    {
+      "id": "paper_1",
+      "type": "paper",
+      "location": "eastbrook"
+    },
+    {
+      "id": "ink_1",
+      "type": "ink",
+      "location": "highfield"
+    },
+    {
+      "id": "stamp_1",
+      "type": "stamp",
+      "location": "highfield"
+    },
+    {
+      "id": "flour_1",
+      "type": "flour",
+      "location": "queensway"
+    },
+    {
+      "id": "lamp_base_1",
+      "type": "lamp_base",
+      "location": "juniper"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job_1",
+      "kind": "craft",
+      "target_type": "cake",
+      "destination": "yarrow",
+      "depends_on": []
+    },
+    {
+      "id": "job_2",
+      "kind": "deliver",
+      "target_type": "bulb",
+      "destination": "thornbury",
+      "depends_on": []
+    },
+    {
+      "id": "job_3",
+      "kind": "craft",
+      "target_type": "poster",
+      "destination": "glenhaven",
+      "depends_on": []
+    },
+    {
+      "id": "job_4",
+      "kind": "deliver",
+      "target_type": "stamp",
+      "destination": "stonehill",
+      "depends_on": []
+    }
+  ],
+  "schedule": [
+    {
+      "index": 0,
+      "type": "station_offline",
+      "trigger_subgoal": 6
+    }
+  ],
+  "metadata": {
+    "generator_version": 4,
+    "attempt": 0,
+    "rejections": {},
+    "radius": 3,
+    "composition": {
+      "jobs": 4,
+      "deliver": 2,
+      "craft": 2,
+      "dependent": 0
+    },
+    "solve_seconds_total": 0.542,
+    "solve_expanded": 12784,
+    "disruption_order_changed": false,
+    "reference_replay": [
+      {
+        "index": 0,
+        "type": "station_offline",
+        "target": "station:print_shop_1",
+        "cost_before": 19,
+        "cost_after": 21,
+        "affected_jobs": [
+          "job_3"
+        ]
+      }
+    ]
+  }
+}

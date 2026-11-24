@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "id": "test_L30_D0_001",
+  "seed": 1293507501,
+  "set_name": "test",
+  "length_level": 30,
+  "disruption_level": 0,
+  "capacity": 3,
+  "start_location": "birchwood",
+  "optimal_actions": 33,
+  "total_subgoals": 12,
+  "reference_actions": 33,
+  "map": {
+    "id": "test_map_2",
+    "seed": 2002,
+    "locations": [
+      {
+        "id": "ashford",
+        "name": "Ashford"
+      },
+      {
+        "id": "birchwood",
+        "name": "Birchwood"
+      },
+      {
+        "id": "dunmore",
+        "name": "Dunmore"
+      },
+      {
+        "id": "eastbrook",
+        "name": "Eastbrook"
+      },
+      {
+        "id": "ironbridge",
+        "name": "Ironbridge"
+      },
+      {
+        "id": "juniper",
+        "name": "Juniper"
+      },
+      {
+        "id": "kingsley",
+        "name": "Kingsley"
+      },
+      {
+        "id": "northgate",
+        "name": "Northgate"
+      },
+      {
+        "id": "oakridge",
+        "name": "Oakridge"
+      },
+      {
+        "id": "pinecrest",
+        "name": "Pinecrest"
+      },
+      {
+        "id": "queensway",
+        "name": "Queensway"
+      },
+      {
+        "id": "riverton",
+        "name": "Riverton"
+      },
+      {
+        "id": "stonehill",
+        "name": "Stonehill"
+      },
+      {
+        "id": "yarrow",
+        "name": "Yarrow"
+      },
+      {
+        "id": "zephyr",
+        "name": "Zephyr"
+      }
+    ],
+    "roads": [
+      {
+        "a": "ashford",
+        "b": "dunmore",
+        "open": true
+      },
+      {
+        "a": "ashford",
+        "b": "eastbrook",
+        "open": true
+      },
+      {
+        "a": "ashford",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "kingsley",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "dunmore",
+        "b": "northgate",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "juniper",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "queensway",
+        "open": true
+      },
+      {
+        "a": "ironbridge",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "ironbridge",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "juniper",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "juniper",
+        "b": "zephyr",
+        "open": true
+      },
+      {
+        "a": "kingsley",
+        "b": "stonehill",
+        "open": true
+      },
+      {
+        "a": "northgate",
+        "b": "pinecrest",
+        "open": true
+      },
+      {
+        "a": "northgate",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "oakridge",
+        "b": "pinecrest",
+        "open": true
+      },
+      {
+        "a": "oakridge",
+        "b": "zephyr",
+        "open": true
+      },
+      {
+        "a": "queensway",
+        "b": "stonehill",
+        "open": true
+      }
+    ],
+    "stations": [
+      {
+        "id": "oven_1",
+        "type": "oven",
+        "location": "ironbridge",
+        "online": true
+      },
+      {
+        "id": "oven_2",
+        "type": "oven",
+        "location": "eastbrook",
+        "online": true
+      },
+      {
+        "id": "print_shop_1",
+        "type": "print_shop",
+        "location": "kingsley",
+        "online": true
+      },
+      {
+        "id": "print_shop_2",
+        "type": "print_shop",
+        "location": "yarrow",
+        "online": true
+      },
+      {
+        "id": "repair_bench_1",
+        "type": "repair_bench",
+        "location": "dunmore",
+        "online": true
+      },
+      {
+        "id": "repair_bench_2",
+        "type": "repair_bench",
+        "location": "queensway",
+        "online": true
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "radio_shell_1",
+      "type": "radio_shell",
+      "location": "stonehill"
+    },
+    {
+      "id": "battery_1",
+      "type": "battery",
+      "location": "ashford"
+    },
+    {
+      "id": "card_1",
+      "type": "card",
+      "location": "queensway"
+    },
+    {
+      "id": "stamp_1",
+      "type": "stamp",
+      "location": "oakridge"
+    },
+    {
+      "id": "cheese_1",
+      "type": "cheese",
+      "location": "yarrow"
+    },
+    {
+      "id": "eggs_1",
+      "type": "eggs",
+      "location": "ironbridge"
+    },
+    {
+      "id": "lamp_base_1",
+      "type": "lamp_base",
+      "location": "yarrow"
+    },
+    {
+      "id": "paper_1",
+      "type": "paper",
+      "location": "queensway"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job_1",
+      "kind": "craft",
+      "target_type": "radio",
+      "destination": "pinecrest",
+      "depends_on": []
+    },
+    {
+      "id": "job_2",
+      "kind": "craft",
+      "target_type": "postcard",
+      "destination": "pinecrest",
+      "depends_on": []
+    },
+    {
+      "id": "job_3",
+      "kind": "deliver",
+      "target_type": "cheese",
+      "destination": "kingsley",
+      "depends_on": []
+    },
+    {
+      "id": "job_4",
+      "kind": "deliver",
+      "target_type": "eggs",
+      "destination": "dunmore",
+      "depends_on": []
+    }
+  ],
+  "schedule": [],
+  "metadata": {
+    "generator_version": 4,
+    "attempt": 1,
+    "rejections": {
+      "too_short": 1
+    },
+    "radius": 8,
+    "composition": {
+      "jobs": 4,
+      "deliver": 2,
+      "craft": 2,
+      "dependent": 0
+    },
+    "solve_seconds_total": 0.235,
+    "solve_expanded": 9001,
+    "disruption_order_changed": false,
+    "reference_replay": []
+  }
+}

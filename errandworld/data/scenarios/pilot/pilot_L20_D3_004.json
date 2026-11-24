@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "id": "pilot_L20_D3_004",
+  "seed": 1187988001,
+  "set_name": "pilot",
+  "length_level": 20,
+  "disruption_level": 3,
+  "capacity": 3,
+  "start_location": "zephyr",
+  "optimal_actions": 21,
+  "total_subgoals": 8,
+  "reference_actions": 32,
+  "map": {
+    "id": "test_map_5",
+    "seed": 2005,
+    "locations": [
+      {
+        "id": "ashford",
+        "name": "Ashford"
+      },
+      {
+        "id": "birchwood",
+        "name": "Birchwood"
+      },
+      {
+        "id": "clearwater",
+        "name": "Clearwater"
+      },
+      {
+        "id": "dunmore",
+        "name": "Dunmore"
+      },
+      {
+        "id": "eastbrook",
+        "name": "Eastbrook"
+      },
+      {
+        "id": "fairview",
+        "name": "Fairview"
+      },
+      {
+        "id": "glenhaven",
+        "name": "Glenhaven"
+      },
+      {
+        "id": "highfield",
+        "name": "Highfield"
+      },
+      {
+        "id": "northgate",
+        "name": "Northgate"
+      },
+      {
+        "id": "oakridge",
+        "name": "Oakridge"
+      },
+      {
+        "id": "pinecrest",
+        "name": "Pinecrest"
+      },
+      {
+        "id": "riverton",
+        "name": "Riverton"
+      },
+      {
+        "id": "thornbury",
+        "name": "Thornbury"
+      },
+      {
+        "id": "upton",
+        "name": "Upton"
+      },
+      {
+        "id": "zephyr",
+        "name": "Zephyr"
+      }
+    ],
+    "roads": [
+      {
+        "a": "ashford",
+        "b": "fairview",
+        "open": true
+      },
+      {
+        "a": "ashford",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "eastbrook",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "highfield",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "pinecrest",
+        "open": true
+      },
+      {
+        "a": "clearwater",
+        "b": "glenhaven",
+        "open": true
+      },
+      {
+        "a": "clearwater",
+        "b": "northgate",
+        "open": true
+      },
+      {
+        "a": "dunmore",
+        "b": "eastbrook",
+        "open": true
+      },
+      {
+        "a": "dunmore",
+        "b": "highfield",
+        "open": true
+      },
+      {
+        "a": "dunmore",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "fairview",
+        "b": "glenhaven",
+        "open": true
+      },
+      {
+        "a": "fairview",
+        "b": "zephyr",
+        "open": true
+      },
+      {
+        "a": "glenhaven",
+        "b": "upton",
+        "open": true
+      },
+      {
+        "a": "northgate",
+        "b": "pinecrest",
+        "open": true
+      },
+      {
+        "a": "oakridge",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "oakridge",
+        "b": "upton",
+        "open": true
+      },
+      {
+        "a": "riverton",
+        "b": "zephyr",
+        "open": true
+      }
+    ],
+    "stations": [
+      {
+        "id": "oven_1",
+        "type": "oven",
+        "location": "thornbury",
+        "online": true
+      },
+      {
+        "id": "oven_2",
+        "type": "oven",
+        "location": "northgate",
+        "online": true
+      },
+      {
+        "id": "print_shop_1",
+        "type": "print_shop",
+        "location": "birchwood",
+        "online": true
+      },
+      {
+        "id": "print_shop_2",
+        "type": "print_shop",
+        "location": "eastbrook",
+        "online": true
+      },
+      {
+        "id": "repair_bench_1",
+        "type": "repair_bench",
+        "location": "dunmore",
+        "online": true
+      },
+      {
+        "id": "repair_bench_2",
+        "type": "repair_bench",
+        "location": "oakridge",
+        "online": true
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "frame_1",
+      "type": "frame",
+      "location": "clearwater"
+    },
+    {
+      "id": "card_1",
+      "type": "card",
+      "location": "highfield"
+    },
+    {
+      "id": "lamp_base_1",
+      "type": "lamp_base",
+      "location": "glenhaven"
+    },
+    {
+      "id": "bulb_1",
+      "type": "bulb",
+      "location": "thornbury"
+    },
+    {
+      "id": "water_1",
+      "type": "water",
+      "location": "glenhaven"
+    },
+    {
+      "id": "ink_1",
+      "type": "ink",
+      "location": "birchwood"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job_1",
+      "kind": "deliver",
+      "target_type": "frame",
+      "destination": "oakridge",
+      "depends_on": []
+    },
+    {
+      "id": "job_2",
+      "kind": "deliver",
+      "target_type": "card",
+      "destination": "dunmore",
+      "depends_on": []
+    },
+    {
+      "id": "job_3",
+      "kind": "craft",
+      "target_type": "lamp",
+      "destination": "zephyr",
+      "depends_on": []
+    }
+  ],
+  "schedule": [
+    {
+      "index": 0,
+      "type": "moved_item",
+      "trigger_subgoal": 2
+    },
+    {
+      "index": 1,
+      "type": "stale_map",
+      "trigger_subgoal": 4
+    },
+    {
+      "index": 2,
+      "type": "station_offline",
+      "trigger_subgoal": 6
+    }
+  ],
+  "metadata": {
+    "generator_version": 4,
+    "attempt": 6,
+    "rejections": {
+      "schedule_replay": 4,
+      "too_long": 2
+    },
+    "radius": 4,
+    "composition": {
+      "jobs": 3,
+      "deliver": 2,
+      "craft": 1,
+      "dependent": 0
+    },
+    "solve_seconds_total": 0.027,
+    "solve_expanded": 29,
+    "disruption_order_changed": true,
+    "reference_replay": [
+      {
+        "index": 0,
+        "type": "moved_item",
+        "target": "item:bulb_1",
+        "cost_before": 15,
+        "cost_after": 19,
+        "affected_jobs": [
+          "job_3"
+        ]
+      },
+      {
+        "index": 1,
+        "type": "stale_map",
+        "target": "item:card_1",
+        "cost_before": 10,
+        "cost_after": 14,
+        "affected_jobs": [
+          "job_2"
+        ]
+      },
+      {
+        "index": 2,
+        "type": "station_offline",
+        "target": "station:repair_bench_1",
+        "cost_before": 5,
+        "cost_after": 8,
+        "affected_jobs": [
+          "job_3"
+        ]
+      }
+    ]
+  }
+}
