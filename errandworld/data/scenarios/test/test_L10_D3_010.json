@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "id": "test_L10_D3_010",
+  "seed": 2013998644,
+  "set_name": "test",
+  "length_level": 10,
+  "disruption_level": 3,
+  "capacity": 3,
+  "start_location": "zephyr",
+  "optimal_actions": 10,
+  "total_subgoals": 6,
+  "reference_actions": 18,
+  "map": {
+    "id": "test_map_1",
+    "seed": 2001,
+    "locations": [
+      {
+        "id": "ashford",
+        "name": "Ashford"
+      },
+      {
+        "id": "birchwood",
+        "name": "Birchwood"
+      },
+      {
+        "id": "clearwater",
+        "name": "Clearwater"
+      },
+      {
+        "id": "eastbrook",
+        "name": "Eastbrook"
+      },
+      {
+        "id": "fairview",
+        "name": "Fairview"
+      },
+      {
+        "id": "glenhaven",
+        "name": "Glenhaven"
+      },
+      {
+        "id": "highfield",
+        "name": "Highfield"
+      },
+      {
+        "id": "kingsley",
+        "name": "Kingsley"
+      },
+      {
+        "id": "lakeside",
+        "name": "Lakeside"
+      },
+      {
+        "id": "pinecrest",
+        "name": "Pinecrest"
+      },
+      {
+        "id": "riverton",
+        "name": "Riverton"
+      },
+      {
+        "id": "stonehill",
+        "name": "Stonehill"
+      },
+      {
+        "id": "thornbury",
+        "name": "Thornbury"
+      },
+      {
+        "id": "upton",
+        "name": "Upton"
+      },
+      {
+        "id": "zephyr",
+        "name": "Zephyr"
+      }
+    ],
+    "roads": [
+      {
+        "a": "ashford",
+        "b": "pinecrest",
+        "open": true
+      },
+      {
+        "a": "ashford",
+        "b": "zephyr",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "glenhaven",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "clearwater",
+        "b": "kingsley",
+        "open": true
+      },
+      {
+        "a": "clearwater",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "clearwater",
+        "b": "upton",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "stonehill",
+        "open": true
+      },
+      {
+        "a": "fairview",
+        "b": "kingsley",
+        "open": true
+      },
+      {
+        "a": "fairview",
+        "b": "upton",
+        "open": true
+      },
+      {
+        "a": "glenhaven",
+        "b": "highfield",
+        "open": true
+      },
+      {
+        "a": "glenhaven",
+        "b": "upton",
+        "open": true
+      },
+      {
+        "a": "highfield",
+        "b": "lakeside",
+        "open": true
+      },
+      {
+        "a": "highfield",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "lakeside",
+        "b": "upton",
+        "open": true
+      },
+      {
+        "a": "lakeside",
+        "b": "zephyr",
+        "open": true
+      },
+      {
+        "a": "pinecrest",
+        "b": "stonehill",
+        "open": true
+      }
+    ],
+    "stations": [
+      {
+        "id": "oven_1",
+        "type": "oven",
+        "location": "riverton",
+        "online": true
+      },
+      {
+        "id": "oven_2",
+        "type": "oven",
+        "location": "birchwood",
+        "online": true
+      },
+      {
+        "id": "print_shop_1",
+        "type": "print_shop",
+        "location": "lakeside",
+        "online": true
+      },
+      {
+        "id": "print_shop_2",
+        "type": "print_shop",
+        "location": "upton",
+        "online": true
+      },
+      {
+        "id": "repair_bench_1",
+        "type": "repair_bench",
+        "location": "eastbrook",
+        "online": true
+      },
+      {
+        "id": "repair_bench_2",
+        "type": "repair_bench",
+        "location": "zephyr",
+        "online": true
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "card_1",
+      "type": "card",
+      "location": "zephyr"
+    },
+    {
+      "id": "stamp_1",
+      "type": "stamp",
+      "location": "highfield"
+    },
+    {
+      "id": "sugar_1",
+      "type": "sugar",
+      "location": "lakeside"
+    },
+    {
+      "id": "water_1",
+      "type": "water",
+      "location": "glenhaven"
+    },
+    {
+      "id": "cheese_1",
+      "type": "cheese",
+      "location": "birchwood"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job_1",
+      "kind": "craft",
+      "target_type": "postcard",
+      "destination": "highfield",
+      "depends_on": []
+    },
+    {
+      "id": "job_2",
+      "kind": "deliver",
+      "target_type": "sugar",
+      "destination": "highfield",
+      "depends_on": []
+    }
+  ],
+  "schedule": [
+    {
+      "index": 0,
+      "type": "stale_map",
+      "trigger_subgoal": 2
+    },
+    {
+      "index": 1,
+      "type": "moved_item",
+      "trigger_subgoal": 3
+    },
+    {
+      "index": 2,
+      "type": "station_offline",
+      "trigger_subgoal": 4
+    }
+  ],
+  "metadata": {
+    "generator_version": 4,
+    "attempt": 19,
+    "rejections": {
+      "schedule_replay": 3,
+      "too_long": 16
+    },
+    "radius": 1,
+    "composition": {
+      "jobs": 2,
+      "deliver": 1,
+      "craft": 1,
+      "dependent": 0
+    },
+    "solve_seconds_total": 0.028,
+    "solve_expanded": 13,
+    "disruption_order_changed": true,
+    "reference_replay": [
+      {
+        "index": 0,
+        "type": "stale_map",
+        "target": "item:stamp_1",
+        "cost_before": 7,
+        "cost_after": 11,
+        "affected_jobs": [
+          "job_1"
+        ]
+      },
+      {
+        "index": 1,
+        "type": "moved_item",
+        "target": "item:stamp_1",
+        "cost_before": 9,
+        "cost_after": 11,
+        "affected_jobs": [
+          "job_1"
+        ]
+      },
+      {
+        "index": 2,
+        "type": "station_offline",
+        "target": "station:print_shop_1",
+        "cost_before": 6,
+        "cost_after": 8,
+        "affected_jobs": [
+          "job_1"
+        ]
+      }
+    ]
+  }
+}

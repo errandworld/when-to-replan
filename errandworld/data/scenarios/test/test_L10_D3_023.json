@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "id": "test_L10_D3_023",
+  "seed": 1614855703,
+  "set_name": "test",
+  "length_level": 10,
+  "disruption_level": 3,
+  "capacity": 3,
+  "start_location": "queensway",
+  "optimal_actions": 9,
+  "total_subgoals": 6,
+  "reference_actions": 18,
+  "map": {
+    "id": "test_map_4",
+    "seed": 2004,
+    "locations": [
+      {
+        "id": "ashford",
+        "name": "Ashford"
+      },
+      {
+        "id": "clearwater",
+        "name": "Clearwater"
+      },
+      {
+        "id": "dunmore",
+        "name": "Dunmore"
+      },
+      {
+        "id": "eastbrook",
+        "name": "Eastbrook"
+      },
+      {
+        "id": "glenhaven",
+        "name": "Glenhaven"
+      },
+      {
+        "id": "ironbridge",
+        "name": "Ironbridge"
+      },
+      {
+        "id": "lakeside",
+        "name": "Lakeside"
+      },
+      {
+        "id": "millbrook",
+        "name": "Millbrook"
+      },
+      {
+        "id": "oakridge",
+        "name": "Oakridge"
+      },
+      {
+        "id": "pinecrest",
+        "name": "Pinecrest"
+      },
+      {
+        "id": "queensway",
+        "name": "Queensway"
+      },
+      {
+        "id": "thornbury",
+        "name": "Thornbury"
+      },
+      {
+        "id": "upton",
+        "name": "Upton"
+      },
+      {
+        "id": "yarrow",
+        "name": "Yarrow"
+      },
+      {
+        "id": "zephyr",
+        "name": "Zephyr"
+      }
+    ],
+    "roads": [
+      {
+        "a": "ashford",
+        "b": "ironbridge",
+        "open": true
+      },
+      {
+        "a": "ashford",
+        "b": "oakridge",
+        "open": true
+      },
+      {
+        "a": "ashford",
+        "b": "upton",
+        "open": true
+      },
+      {
+        "a": "clearwater",
+        "b": "glenhaven",
+        "open": true
+      },
+      {
+        "a": "clearwater",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "clearwater",
+        "b": "upton",
+        "open": true
+      },
+      {
+        "a": "dunmore",
+        "b": "millbrook",
+        "open": true
+      },
+      {
+        "a": "dunmore",
+        "b": "pinecrest",
+        "open": true
+      },
+      {
+        "a": "dunmore",
+        "b": "zephyr",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "glenhaven",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "oakridge",
+        "open": true
+      },
+      {
+        "a": "glenhaven",
+        "b": "millbrook",
+        "open": true
+      },
+      {
+        "a": "ironbridge",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "lakeside",
+        "b": "millbrook",
+        "open": true
+      },
+      {
+        "a": "lakeside",
+        "b": "queensway",
+        "open": true
+      },
+      {
+        "a": "pinecrest",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "queensway",
+        "b": "upton",
+        "open": true
+      },
+      {
+        "a": "thornbury",
+        "b": "zephyr",
+        "open": true
+      }
+    ],
+    "stations": [
+      {
+        "id": "oven_1",
+        "type": "oven",
+        "location": "yarrow",
+        "online": true
+      },
+      {
+        "id": "oven_2",
+        "type": "oven",
+        "location": "millbrook",
+        "online": true
+      },
+      {
+        "id": "print_shop_1",
+        "type": "print_shop",
+        "location": "lakeside",
+        "online": true
+      },
+      {
+        "id": "print_shop_2",
+        "type": "print_shop",
+        "location": "thornbury",
+        "online": true
+      },
+      {
+        "id": "repair_bench_1",
+        "type": "repair_bench",
+        "location": "upton",
+        "online": true
+      },
+      {
+        "id": "repair_bench_2",
+        "type": "repair_bench",
+        "location": "oakridge",
+        "online": true
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "radio_shell_1",
+      "type": "radio_shell",
+      "location": "queensway"
+    },
+    {
+      "id": "battery_1",
+      "type": "battery",
+      "location": "lakeside"
+    },
+    {
+      "id": "card_1",
+      "type": "card",
+      "location": "queensway"
+    },
+    {
+      "id": "paper_1",
+      "type": "paper",
+      "location": "upton"
+    },
+    {
+      "id": "ink_1",
+      "type": "ink",
+      "location": "dunmore"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job_1",
+      "kind": "craft",
+      "target_type": "radio",
+      "destination": "upton",
+      "depends_on": []
+    },
+    {
+      "id": "job_2",
+      "kind": "deliver",
+      "target_type": "card",
+      "destination": "upton",
+      "depends_on": []
+    }
+  ],
+  "schedule": [
+    {
+      "index": 0,
+      "type": "stale_map",
+      "trigger_subgoal": 2
+    },
+    {
+      "index": 1,
+      "type": "moved_item",
+      "trigger_subgoal": 3
+    },
+    {
+      "index": 2,
+      "type": "road_closure",
+      "trigger_subgoal": 4
+    }
+  ],
+  "metadata": {
+    "generator_version": 4,
+    "attempt": 13,
+    "rejections": {
+      "schedule_replay": 2,
+      "too_long": 10,
+      "too_short": 1
+    },
+    "radius": 1,
+    "composition": {
+      "jobs": 2,
+      "deliver": 1,
+      "craft": 1,
+      "dependent": 0
+    },
+    "solve_seconds_total": 0.014,
+    "solve_expanded": 9,
+    "disruption_order_changed": false,
+    "reference_replay": [
+      {
+        "index": 0,
+        "type": "stale_map",
+        "target": "item:radio_shell_1",
+        "cost_before": 5,
+        "cost_after": 11,
+        "affected_jobs": [
+          "job_1"
+        ]
+      },
+      {
+        "index": 1,
+        "type": "moved_item",
+        "target": "item:radio_shell_1",
+        "cost_before": 9,
+        "cost_after": 11,
+        "affected_jobs": [
+          "job_1"
+        ]
+      },
+      {
+        "index": 2,
+        "type": "road_closure",
+        "target": "road:ashford|ironbridge",
+        "cost_before": 6,
+        "cost_after": 7,
+        "affected_jobs": [
+          "job_1"
+        ]
+      }
+    ]
+  }
+}

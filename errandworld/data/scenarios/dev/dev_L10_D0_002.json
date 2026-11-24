@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "id": "dev_L10_D0_002",
+  "seed": 792389005,
+  "set_name": "dev",
+  "length_level": 10,
+  "disruption_level": 0,
+  "capacity": 3,
+  "start_location": "glenhaven",
+  "optimal_actions": 10,
+  "total_subgoals": 6,
+  "reference_actions": 10,
+  "map": {
+    "id": "dev_map_1",
+    "seed": 1001,
+    "locations": [
+      {
+        "id": "ashford",
+        "name": "Ashford"
+      },
+      {
+        "id": "birchwood",
+        "name": "Birchwood"
+      },
+      {
+        "id": "clearwater",
+        "name": "Clearwater"
+      },
+      {
+        "id": "dunmore",
+        "name": "Dunmore"
+      },
+      {
+        "id": "fairview",
+        "name": "Fairview"
+      },
+      {
+        "id": "glenhaven",
+        "name": "Glenhaven"
+      },
+      {
+        "id": "juniper",
+        "name": "Juniper"
+      },
+      {
+        "id": "kingsley",
+        "name": "Kingsley"
+      },
+      {
+        "id": "lakeside",
+        "name": "Lakeside"
+      },
+      {
+        "id": "millbrook",
+        "name": "Millbrook"
+      },
+      {
+        "id": "northgate",
+        "name": "Northgate"
+      },
+      {
+        "id": "pinecrest",
+        "name": "Pinecrest"
+      },
+      {
+        "id": "riverton",
+        "name": "Riverton"
+      },
+      {
+        "id": "thornbury",
+        "name": "Thornbury"
+      },
+      {
+        "id": "upton",
+        "name": "Upton"
+      }
+    ],
+    "roads": [
+      {
+        "a": "ashford",
+        "b": "kingsley",
+        "open": true
+      },
+      {
+        "a": "ashford",
+        "b": "lakeside",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "clearwater",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "dunmore",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "millbrook",
+        "open": true
+      },
+      {
+        "a": "clearwater",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "clearwater",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "dunmore",
+        "b": "glenhaven",
+        "open": true
+      },
+      {
+        "a": "dunmore",
+        "b": "kingsley",
+        "open": true
+      },
+      {
+        "a": "fairview",
+        "b": "glenhaven",
+        "open": true
+      },
+      {
+        "a": "fairview",
+        "b": "upton",
+        "open": true
+      },
+      {
+        "a": "glenhaven",
+        "b": "northgate",
+        "open": true
+      },
+      {
+        "a": "juniper",
+        "b": "lakeside",
+        "open": true
+      },
+      {
+        "a": "juniper",
+        "b": "pinecrest",
+        "open": true
+      },
+      {
+        "a": "millbrook",
+        "b": "northgate",
+        "open": true
+      },
+      {
+        "a": "northgate",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "pinecrest",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "thornbury",
+        "b": "upton",
+        "open": true
+      }
+    ],
+    "stations": [
+      {
+        "id": "oven_1",
+        "type": "oven",
+        "location": "birchwood",
+        "online": true
+      },
+      {
+        "id": "oven_2",
+        "type": "oven",
+        "location": "riverton",
+        "online": true
+      },
+      {
+        "id": "print_shop_1",
+        "type": "print_shop",
+        "location": "dunmore",
+        "online": true
+      },
+      {
+        "id": "print_shop_2",
+        "type": "print_shop",
+        "location": "fairview",
+        "online": true
+      },
+      {
+        "id": "repair_bench_1",
+        "type": "repair_bench",
+        "location": "lakeside",
+        "online": true
+      },
+      {
+        "id": "repair_bench_2",
+        "type": "repair_bench",
+        "location": "pinecrest",
+        "online": true
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "frame_1",
+      "type": "frame",
+      "location": "dunmore"
+    },
+    {
+      "id": "paper_1",
+      "type": "paper",
+      "location": "kingsley"
+    },
+    {
+      "id": "ink_1",
+      "type": "ink",
+      "location": "dunmore"
+    },
+    {
+      "id": "radio_shell_1",
+      "type": "radio_shell",
+      "location": "pinecrest"
+    },
+    {
+      "id": "bulb_1",
+      "type": "bulb",
+      "location": "kingsley"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job_1",
+      "kind": "deliver",
+      "target_type": "frame",
+      "destination": "glenhaven",
+      "depends_on": []
+    },
+    {
+      "id": "job_2",
+      "kind": "craft",
+      "target_type": "poster",
+      "destination": "glenhaven",
+      "depends_on": []
+    }
+  ],
+  "schedule": [],
+  "metadata": {
+    "generator_version": 4,
+    "attempt": 3,
+    "rejections": {
+      "too_long": 3
+    },
+    "radius": 1,
+    "composition": {
+      "jobs": 2,
+      "deliver": 1,
+      "craft": 1,
+      "dependent": 0
+    },
+    "solve_seconds_total": 0.008,
+    "solve_expanded": 10,
+    "disruption_order_changed": false,
+    "reference_replay": []
+  }
+}

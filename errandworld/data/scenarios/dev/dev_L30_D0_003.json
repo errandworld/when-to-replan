@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "id": "dev_L30_D0_003",
+  "seed": 1884251560,
+  "set_name": "dev",
+  "length_level": 30,
+  "disruption_level": 0,
+  "capacity": 3,
+  "start_location": "pinecrest",
+  "optimal_actions": 29,
+  "total_subgoals": 12,
+  "reference_actions": 29,
+  "map": {
+    "id": "dev_map_2",
+    "seed": 1002,
+    "locations": [
+      {
+        "id": "birchwood",
+        "name": "Birchwood"
+      },
+      {
+        "id": "eastbrook",
+        "name": "Eastbrook"
+      },
+      {
+        "id": "glenhaven",
+        "name": "Glenhaven"
+      },
+      {
+        "id": "highfield",
+        "name": "Highfield"
+      },
+      {
+        "id": "ironbridge",
+        "name": "Ironbridge"
+      },
+      {
+        "id": "juniper",
+        "name": "Juniper"
+      },
+      {
+        "id": "kingsley",
+        "name": "Kingsley"
+      },
+      {
+        "id": "northgate",
+        "name": "Northgate"
+      },
+      {
+        "id": "pinecrest",
+        "name": "Pinecrest"
+      },
+      {
+        "id": "queensway",
+        "name": "Queensway"
+      },
+      {
+        "id": "riverton",
+        "name": "Riverton"
+      },
+      {
+        "id": "stonehill",
+        "name": "Stonehill"
+      },
+      {
+        "id": "thornbury",
+        "name": "Thornbury"
+      },
+      {
+        "id": "westvale",
+        "name": "Westvale"
+      },
+      {
+        "id": "yarrow",
+        "name": "Yarrow"
+      }
+    ],
+    "roads": [
+      {
+        "a": "birchwood",
+        "b": "kingsley",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "juniper",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "glenhaven",
+        "b": "highfield",
+        "open": true
+      },
+      {
+        "a": "glenhaven",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "highfield",
+        "b": "queensway",
+        "open": true
+      },
+      {
+        "a": "ironbridge",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "ironbridge",
+        "b": "westvale",
+        "open": true
+      },
+      {
+        "a": "juniper",
+        "b": "northgate",
+        "open": true
+      },
+      {
+        "a": "kingsley",
+        "b": "queensway",
+        "open": true
+      },
+      {
+        "a": "northgate",
+        "b": "queensway",
+        "open": true
+      },
+      {
+        "a": "northgate",
+        "b": "stonehill",
+        "open": true
+      },
+      {
+        "a": "pinecrest",
+        "b": "stonehill",
+        "open": true
+      },
+      {
+        "a": "pinecrest",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "pinecrest",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "stonehill",
+        "b": "westvale",
+        "open": true
+      }
+    ],
+    "stations": [
+      {
+        "id": "oven_1",
+        "type": "oven",
+        "location": "westvale",
+        "online": true
+      },
+      {
+        "id": "oven_2",
+        "type": "oven",
+        "location": "stonehill",
+        "online": true
+      },
+      {
+        "id": "print_shop_1",
+        "type": "print_shop",
+        "location": "ironbridge",
+        "online": true
+      },
+      {
+        "id": "print_shop_2",
+        "type": "print_shop",
+        "location": "yarrow",
+        "online": true
+      },
+      {
+        "id": "repair_bench_1",
+        "type": "repair_bench",
+        "location": "riverton",
+        "online": true
+      },
+      {
+        "id": "repair_bench_2",
+        "type": "repair_bench",
+        "location": "thornbury",
+        "online": true
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "card_1",
+      "type": "card",
+      "location": "eastbrook"
+    },
+    {
+      "id": "stamp_1",
+      "type": "stamp",
+      "location": "thornbury"
+    },
+    {
+      "id": "battery_1",
+      "type": "battery",
+      "location": "birchwood"
+    },
+    {
+      "id": "sugar_1",
+      "type": "sugar",
+      "location": "ironbridge"
+    },
+    {
+      "id": "eggs_1",
+      "type": "eggs",
+      "location": "eastbrook"
+    },
+    {
+      "id": "frame_1",
+      "type": "frame",
+      "location": "stonehill"
+    },
+    {
+      "id": "antenna_1",
+      "type": "antenna",
+      "location": "glenhaven"
+    },
+    {
+      "id": "lamp_base_1",
+      "type": "lamp_base",
+      "location": "eastbrook"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job_1",
+      "kind": "craft",
+      "target_type": "postcard",
+      "destination": "pinecrest",
+      "depends_on": []
+    },
+    {
+      "id": "job_2",
+      "kind": "deliver",
+      "target_type": "battery",
+      "destination": "stonehill",
+      "depends_on": []
+    },
+    {
+      "id": "job_3",
+      "kind": "craft",
+      "target_type": "cake",
+      "destination": "glenhaven",
+      "depends_on": []
+    },
+    {
+      "id": "job_4",
+      "kind": "deliver",
+      "target_type": "frame",
+      "destination": "pinecrest",
+      "depends_on": []
+    }
+  ],
+  "schedule": [],
+  "metadata": {
+    "generator_version": 4,
+    "attempt": 0,
+    "rejections": {},
+    "radius": 8,
+    "composition": {
+      "jobs": 4,
+      "deliver": 2,
+      "craft": 2,
+      "dependent": 0
+    },
+    "solve_seconds_total": 0.035,
+    "solve_expanded": 1716,
+    "disruption_order_changed": false,
+    "reference_replay": []
+  }
+}

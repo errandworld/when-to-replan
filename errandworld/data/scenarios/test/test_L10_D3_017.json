@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "id": "test_L10_D3_017",
+  "seed": 1869582547,
+  "set_name": "test",
+  "length_level": 10,
+  "disruption_level": 3,
+  "capacity": 3,
+  "start_location": "riverton",
+  "optimal_actions": 9,
+  "total_subgoals": 6,
+  "reference_actions": 21,
+  "map": {
+    "id": "test_map_3",
+    "seed": 2003,
+    "locations": [
+      {
+        "id": "birchwood",
+        "name": "Birchwood"
+      },
+      {
+        "id": "dunmore",
+        "name": "Dunmore"
+      },
+      {
+        "id": "eastbrook",
+        "name": "Eastbrook"
+      },
+      {
+        "id": "fairview",
+        "name": "Fairview"
+      },
+      {
+        "id": "glenhaven",
+        "name": "Glenhaven"
+      },
+      {
+        "id": "highfield",
+        "name": "Highfield"
+      },
+      {
+        "id": "juniper",
+        "name": "Juniper"
+      },
+      {
+        "id": "millbrook",
+        "name": "Millbrook"
+      },
+      {
+        "id": "oakridge",
+        "name": "Oakridge"
+      },
+      {
+        "id": "pinecrest",
+        "name": "Pinecrest"
+      },
+      {
+        "id": "riverton",
+        "name": "Riverton"
+      },
+      {
+        "id": "stonehill",
+        "name": "Stonehill"
+      },
+      {
+        "id": "thornbury",
+        "name": "Thornbury"
+      },
+      {
+        "id": "yarrow",
+        "name": "Yarrow"
+      },
+      {
+        "id": "zephyr",
+        "name": "Zephyr"
+      }
+    ],
+    "roads": [
+      {
+        "a": "birchwood",
+        "b": "highfield",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "stonehill",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "dunmore",
+        "b": "stonehill",
+        "open": true
+      },
+      {
+        "a": "dunmore",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "juniper",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "fairview",
+        "b": "millbrook",
+        "open": true
+      },
+      {
+        "a": "fairview",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "glenhaven",
+        "b": "juniper",
+        "open": true
+      },
+      {
+        "a": "glenhaven",
+        "b": "oakridge",
+        "open": true
+      },
+      {
+        "a": "highfield",
+        "b": "oakridge",
+        "open": true
+      },
+      {
+        "a": "juniper",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "juniper",
+        "b": "zephyr",
+        "open": true
+      },
+      {
+        "a": "millbrook",
+        "b": "pinecrest",
+        "open": true
+      },
+      {
+        "a": "pinecrest",
+        "b": "zephyr",
+        "open": true
+      },
+      {
+        "a": "thornbury",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "thornbury",
+        "b": "zephyr",
+        "open": true
+      }
+    ],
+    "stations": [
+      {
+        "id": "oven_1",
+        "type": "oven",
+        "location": "oakridge",
+        "online": true
+      },
+      {
+        "id": "oven_2",
+        "type": "oven",
+        "location": "dunmore",
+        "online": true
+      },
+      {
+        "id": "print_shop_1",
+        "type": "print_shop",
+        "location": "highfield",
+        "online": true
+      },
+      {
+        "id": "print_shop_2",
+        "type": "print_shop",
+        "location": "riverton",
+        "online": true
+      },
+      {
+        "id": "repair_bench_1",
+        "type": "repair_bench",
+        "location": "eastbrook",
+        "online": true
+      },
+      {
+        "id": "repair_bench_2",
+        "type": "repair_bench",
+        "location": "juniper",
+        "online": true
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "card_1",
+      "type": "card",
+      "location": "riverton"
+    },
+    {
+      "id": "stamp_1",
+      "type": "stamp",
+      "location": "riverton"
+    },
+    {
+      "id": "sugar_1",
+      "type": "sugar",
+      "location": "eastbrook"
+    },
+    {
+      "id": "battery_1",
+      "type": "battery",
+      "location": "stonehill"
+    },
+    {
+      "id": "antenna_1",
+      "type": "antenna",
+      "location": "zephyr"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job_1",
+      "kind": "craft",
+      "target_type": "postcard",
+      "destination": "fairview",
+      "depends_on": []
+    },
+    {
+      "id": "job_2",
+      "kind": "deliver",
+      "target_type": "sugar",
+      "destination": "fairview",
+      "depends_on": []
+    }
+  ],
+  "schedule": [
+    {
+      "index": 0,
+      "type": "moved_item",
+      "trigger_subgoal": 2
+    },
+    {
+      "index": 1,
+      "type": "stale_map",
+      "trigger_subgoal": 3
+    },
+    {
+      "index": 2,
+      "type": "station_offline",
+      "trigger_subgoal": 4
+    }
+  ],
+  "metadata": {
+    "generator_version": 4,
+    "attempt": 6,
+    "rejections": {
+      "too_long": 6
+    },
+    "radius": 1,
+    "composition": {
+      "jobs": 2,
+      "deliver": 1,
+      "craft": 1,
+      "dependent": 0
+    },
+    "solve_seconds_total": 0.003,
+    "solve_expanded": 9,
+    "disruption_order_changed": true,
+    "reference_replay": [
+      {
+        "index": 0,
+        "type": "moved_item",
+        "target": "item:stamp_1",
+        "cost_before": 5,
+        "cost_after": 7,
+        "affected_jobs": [
+          "job_1"
+        ]
+      },
+      {
+        "index": 1,
+        "type": "stale_map",
+        "target": "item:stamp_1",
+        "cost_before": 5,
+        "cost_after": 13,
+        "affected_jobs": [
+          "job_1"
+        ]
+      },
+      {
+        "index": 2,
+        "type": "station_offline",
+        "target": "station:print_shop_2",
+        "cost_before": 7,
+        "cost_after": 9,
+        "affected_jobs": [
+          "job_1"
+        ]
+      }
+    ]
+  }
+}

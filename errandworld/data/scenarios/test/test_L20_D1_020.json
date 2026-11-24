@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "id": "test_L20_D1_020",
+  "seed": 1001803847,
+  "set_name": "test",
+  "length_level": 20,
+  "disruption_level": 1,
+  "capacity": 3,
+  "start_location": "stonehill",
+  "optimal_actions": 22,
+  "total_subgoals": 8,
+  "reference_actions": 23,
+  "map": {
+    "id": "test_map_1",
+    "seed": 2001,
+    "locations": [
+      {
+        "id": "ashford",
+        "name": "Ashford"
+      },
+      {
+        "id": "birchwood",
+        "name": "Birchwood"
+      },
+      {
+        "id": "clearwater",
+        "name": "Clearwater"
+      },
+      {
+        "id": "eastbrook",
+        "name": "Eastbrook"
+      },
+      {
+        "id": "fairview",
+        "name": "Fairview"
+      },
+      {
+        "id": "glenhaven",
+        "name": "Glenhaven"
+      },
+      {
+        "id": "highfield",
+        "name": "Highfield"
+      },
+      {
+        "id": "kingsley",
+        "name": "Kingsley"
+      },
+      {
+        "id": "lakeside",
+        "name": "Lakeside"
+      },
+      {
+        "id": "pinecrest",
+        "name": "Pinecrest"
+      },
+      {
+        "id": "riverton",
+        "name": "Riverton"
+      },
+      {
+        "id": "stonehill",
+        "name": "Stonehill"
+      },
+      {
+        "id": "thornbury",
+        "name": "Thornbury"
+      },
+      {
+        "id": "upton",
+        "name": "Upton"
+      },
+      {
+        "id": "zephyr",
+        "name": "Zephyr"
+      }
+    ],
+    "roads": [
+      {
+        "a": "ashford",
+        "b": "pinecrest",
+        "open": true
+      },
+      {
+        "a": "ashford",
+        "b": "zephyr",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "glenhaven",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "clearwater",
+        "b": "kingsley",
+        "open": true
+      },
+      {
+        "a": "clearwater",
+        "b": "thornbury",
+        "open": true
+      },
+      {
+        "a": "clearwater",
+        "b": "upton",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "stonehill",
+        "open": true
+      },
+      {
+        "a": "fairview",
+        "b": "kingsley",
+        "open": true
+      },
+      {
+        "a": "fairview",
+        "b": "upton",
+        "open": true
+      },
+      {
+        "a": "glenhaven",
+        "b": "highfield",
+        "open": true
+      },
+      {
+        "a": "glenhaven",
+        "b": "upton",
+        "open": true
+      },
+      {
+        "a": "highfield",
+        "b": "lakeside",
+        "open": true
+      },
+      {
+        "a": "highfield",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "lakeside",
+        "b": "upton",
+        "open": true
+      },
+      {
+        "a": "lakeside",
+        "b": "zephyr",
+        "open": true
+      },
+      {
+        "a": "pinecrest",
+        "b": "stonehill",
+        "open": true
+      }
+    ],
+    "stations": [
+      {
+        "id": "oven_1",
+        "type": "oven",
+        "location": "riverton",
+        "online": true
+      },
+      {
+        "id": "oven_2",
+        "type": "oven",
+        "location": "birchwood",
+        "online": true
+      },
+      {
+        "id": "print_shop_1",
+        "type": "print_shop",
+        "location": "lakeside",
+        "online": true
+      },
+      {
+        "id": "print_shop_2",
+        "type": "print_shop",
+        "location": "upton",
+        "online": true
+      },
+      {
+        "id": "repair_bench_1",
+        "type": "repair_bench",
+        "location": "eastbrook",
+        "online": true
+      },
+      {
+        "id": "repair_bench_2",
+        "type": "repair_bench",
+        "location": "zephyr",
+        "online": true
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "sugar_1",
+      "type": "sugar",
+      "location": "eastbrook"
+    },
+    {
+      "id": "flour_1",
+      "type": "flour",
+      "location": "stonehill"
+    },
+    {
+      "id": "water_1",
+      "type": "water",
+      "location": "clearwater"
+    },
+    {
+      "id": "battery_1",
+      "type": "battery",
+      "location": "highfield"
+    },
+    {
+      "id": "card_1",
+      "type": "card",
+      "location": "eastbrook"
+    },
+    {
+      "id": "paper_1",
+      "type": "paper",
+      "location": "fairview"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job_1",
+      "kind": "deliver",
+      "target_type": "sugar",
+      "destination": "glenhaven",
+      "depends_on": []
+    },
+    {
+      "id": "job_2",
+      "kind": "craft",
+      "target_type": "bread",
+      "destination": "upton",
+      "depends_on": []
+    },
+    {
+      "id": "job_3",
+      "kind": "deliver",
+      "target_type": "battery",
+      "destination": "pinecrest",
+      "depends_on": []
+    }
+  ],
+  "schedule": [
+    {
+      "index": 0,
+      "type": "moved_item",
+      "trigger_subgoal": 4
+    }
+  ],
+  "metadata": {
+    "generator_version": 4,
+    "attempt": 0,
+    "rejections": {},
+    "radius": 4,
+    "composition": {
+      "jobs": 3,
+      "deliver": 2,
+      "craft": 1,
+      "dependent": 0
+    },
+    "solve_seconds_total": 0.006,
+    "solve_expanded": 179,
+    "disruption_order_changed": false,
+    "reference_replay": [
+      {
+        "index": 0,
+        "type": "moved_item",
+        "target": "item:water_1",
+        "cost_before": 14,
+        "cost_after": 15,
+        "affected_jobs": [
+          "job_2"
+        ]
+      }
+    ]
+  }
+}

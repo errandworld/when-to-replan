@@ -1,0 +1,413 @@
+{
+  "set": "dev",
+  "generator_version": 4,
+  "n_scenarios": 45,
+  "disruption_types": {
+    "moved_item": 15,
+    "road_closure": 16,
+    "stale_map": 15,
+    "station_offline": 14
+  },
+  "cells": {
+    "L10_D0": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 10,
+        "median": 10,
+        "max": 11,
+        "mean": 10.2
+      },
+      "craft_share": 0.5,
+      "dependent_jobs": 0,
+      "attempts_total": 18,
+      "rejections": {
+        "too_long": 13
+      },
+      "disruption_types": {},
+      "maps": {
+        "dev_map_1": 3,
+        "dev_map_2": 2
+      }
+    },
+    "L10_D1": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 10,
+        "median": 11,
+        "max": 11,
+        "mean": 10.6
+      },
+      "craft_share": 0.5,
+      "dependent_jobs": 0,
+      "attempts_total": 32,
+      "rejections": {
+        "schedule_replay": 2,
+        "too_long": 24,
+        "too_short": 1
+      },
+      "disruption_types": {
+        "moved_item": 2,
+        "road_closure": 1,
+        "stale_map": 1,
+        "station_offline": 1
+      },
+      "maps": {
+        "dev_map_1": 3,
+        "dev_map_2": 2
+      }
+    },
+    "L10_D3": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 10,
+        "median": 10,
+        "max": 11,
+        "mean": 10.2
+      },
+      "craft_share": 0.5,
+      "dependent_jobs": 0,
+      "attempts_total": 30,
+      "rejections": {
+        "schedule_replay": 2,
+        "too_long": 22,
+        "too_short": 1
+      },
+      "disruption_types": {
+        "moved_item": 3,
+        "road_closure": 4,
+        "stale_map": 4,
+        "station_offline": 4
+      },
+      "maps": {
+        "dev_map_1": 3,
+        "dev_map_2": 2
+      }
+    },
+    "L20_D0": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 19,
+        "median": 21,
+        "max": 22,
+        "mean": 20.6
+      },
+      "craft_share": 0.467,
+      "dependent_jobs": 0,
+      "attempts_total": 9,
+      "rejections": {
+        "too_short": 4
+      },
+      "disruption_types": {},
+      "maps": {
+        "dev_map_1": 3,
+        "dev_map_2": 2
+      }
+    },
+    "L20_D1": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 19,
+        "median": 22,
+        "max": 22,
+        "mean": 21
+      },
+      "craft_share": 0.467,
+      "dependent_jobs": 0,
+      "attempts_total": 21,
+      "rejections": {
+        "schedule_replay": 1,
+        "too_long": 12,
+        "too_short": 3
+      },
+      "disruption_types": {
+        "moved_item": 1,
+        "road_closure": 1,
+        "stale_map": 2,
+        "station_offline": 1
+      },
+      "maps": {
+        "dev_map_1": 3,
+        "dev_map_2": 2
+      }
+    },
+    "L20_D3": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 19,
+        "median": 21,
+        "max": 22,
+        "mean": 20.6
+      },
+      "craft_share": 0.467,
+      "dependent_jobs": 0,
+      "attempts_total": 8,
+      "rejections": {
+        "too_long": 1,
+        "too_short": 2
+      },
+      "disruption_types": {
+        "moved_item": 4,
+        "road_closure": 4,
+        "stale_map": 4,
+        "station_offline": 3
+      },
+      "maps": {
+        "dev_map_1": 3,
+        "dev_map_2": 2
+      }
+    },
+    "L30_D0": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 27,
+        "median": 28,
+        "max": 29,
+        "mean": 28.2
+      },
+      "craft_share": 0.5,
+      "dependent_jobs": 0,
+      "attempts_total": 6,
+      "rejections": {
+        "too_short": 1
+      },
+      "disruption_types": {},
+      "maps": {
+        "dev_map_1": 3,
+        "dev_map_2": 2
+      }
+    },
+    "L30_D1": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 27,
+        "median": 30,
+        "max": 33,
+        "mean": 30
+      },
+      "craft_share": 0.5,
+      "dependent_jobs": 0,
+      "attempts_total": 8,
+      "rejections": {
+        "too_short": 3
+      },
+      "disruption_types": {
+        "moved_item": 1,
+        "road_closure": 2,
+        "stale_map": 1,
+        "station_offline": 1
+      },
+      "maps": {
+        "dev_map_1": 3,
+        "dev_map_2": 2
+      }
+    },
+    "L30_D3": {
+      "n": 5,
+      "optimal_actions": {
+        "min": 27,
+        "median": 27,
+        "max": 30,
+        "mean": 27.8
+      },
+      "craft_share": 0.5,
+      "dependent_jobs": 0,
+      "attempts_total": 6,
+      "rejections": {
+        "too_short": 1
+      },
+      "disruption_types": {
+        "moved_item": 4,
+        "road_closure": 4,
+        "stale_map": 3,
+        "station_offline": 4
+      },
+      "maps": {
+        "dev_map_1": 3,
+        "dev_map_2": 2
+      }
+    }
+  },
+  "generation_seconds": 9.2,
+  "scenarios": {
+    "dev_L10_D0_000": {
+      "fingerprint": "a2d5f43fde9a558256ea7b6575fe92ae245c79ea484eb1eb886be47dd4fb2bb4",
+      "content_key": "7d5e870008a418c9"
+    },
+    "dev_L10_D0_001": {
+      "fingerprint": "5fc75ca2ba975eb91152a650cda96d9834f386233b953dc7f0b1c988799b60c1",
+      "content_key": "1eb324959c48ac48"
+    },
+    "dev_L10_D0_002": {
+      "fingerprint": "1bb29f69e83b3ef61b71ddeb3c6bcf92898efb0aaf4b592b700bbfddf7041a4e",
+      "content_key": "1c9f07ce2bb92b7d"
+    },
+    "dev_L10_D0_003": {
+      "fingerprint": "1c6e582e88c3875cde10b577d8a2b0091e28e7c3382ab26b70175af0b90753c7",
+      "content_key": "34599b8937660365"
+    },
+    "dev_L10_D0_004": {
+      "fingerprint": "9233689e7645cc711e92b81828770b37dc5e00e4bd9213c86a0340826de6d458",
+      "content_key": "7382f92c8e43495e"
+    },
+    "dev_L10_D1_000": {
+      "fingerprint": "26046762dddae7939142f366d3b2e64b5b1ca62837f3111cf0f27254bc71e6cf",
+      "content_key": "5bb61f3275f776ca"
+    },
+    "dev_L10_D1_001": {
+      "fingerprint": "95554d95428bc279b12334381b4cf6f75640375f24586b5ea7e4464a1400c7eb",
+      "content_key": "c647424f3d4e3834"
+    },
+    "dev_L10_D1_002": {
+      "fingerprint": "fe8154777a404a3221f65b0ccb3df2df1273855ab7c55d22cad74cfce1c77010",
+      "content_key": "1a3c519675ced9a6"
+    },
+    "dev_L10_D1_003": {
+      "fingerprint": "a8b0b40cfdc03c0bdb0f6062923590a8c85a6871e89a64db17abcd4d6718b52e",
+      "content_key": "cc08656951f2b240"
+    },
+    "dev_L10_D1_004": {
+      "fingerprint": "0745cab29222abb0440e33941e5510413e92ecd543636b7688dac9e969891345",
+      "content_key": "230d994a13122d53"
+    },
+    "dev_L10_D3_000": {
+      "fingerprint": "a4d739134d26ef8ad08c7f58085027129aabe6ca7ebb00c59f066245bdd6add1",
+      "content_key": "08547e527e6bf3de"
+    },
+    "dev_L10_D3_001": {
+      "fingerprint": "e0fe25b5fe74bbd84e43ea475b34e1fb6c20ff647970ec303bce38fa436ebee3",
+      "content_key": "2eafe076eff78bc7"
+    },
+    "dev_L10_D3_002": {
+      "fingerprint": "c4e987e8bf47a848b3cf3ad5e2ee997a3ed09430a22cc769063d63e732416c6b",
+      "content_key": "4badf4fc029ed41d"
+    },
+    "dev_L10_D3_003": {
+      "fingerprint": "114f5bb92abe51c165928ec9d57de9b960161f7a27b1b73afd48980c1a90d3ce",
+      "content_key": "f021ae16ff8576a0"
+    },
+    "dev_L10_D3_004": {
+      "fingerprint": "33e6e9885857cc44f4b99b71189e8cda9cc543d8c170344934f11aaaf350bb18",
+      "content_key": "01b98bcf622ac893"
+    },
+    "dev_L20_D0_000": {
+      "fingerprint": "1f37d9679ea1a751551a789cbdb8888f786cdaedef81aad4c388bc59d0cba707",
+      "content_key": "68fea6270473cab8"
+    },
+    "dev_L20_D0_001": {
+      "fingerprint": "52c07de0e595bc6d246892ce9bb5fb4bd1f0ae35038382930e1d5d5bc0c67d78",
+      "content_key": "b5c67ef8a98e66b3"
+    },
+    "dev_L20_D0_002": {
+      "fingerprint": "c54b35e5c6b45b3f4a19f92766b13161faa21bfe6a2084194df36f233d473899",
+      "content_key": "1edbe725c9afe1c9"
+    },
+    "dev_L20_D0_003": {
+      "fingerprint": "16ea7220430aba42dd141f2d8e84b1635acc4c1103b112f75351a95b040106a3",
+      "content_key": "0d47e6604a6c5d03"
+    },
+    "dev_L20_D0_004": {
+      "fingerprint": "b92045aef3d5529517b6cc266d79bd70d137705b32b62a72949e811f9ea3dfd9",
+      "content_key": "6599624182025f1d"
+    },
+    "dev_L20_D1_000": {
+      "fingerprint": "1a13135cb498dba08d496e58f234af52da167666d0a826bca1c9917834113a9e",
+      "content_key": "e066d28832a176ea"
+    },
+    "dev_L20_D1_001": {
+      "fingerprint": "53705edbb93016b4a7cee74512565a1e51887b51ca4b3711d24fd26caf2e35f7",
+      "content_key": "f8d482945832a36a"
+    },
+    "dev_L20_D1_002": {
+      "fingerprint": "9b4f70a9b279bda7041cfecc59c7b7b2aa1f0eba313ca223b75dc12ccffe7ab7",
+      "content_key": "fd29bbe5d5277d11"
+    },
+    "dev_L20_D1_003": {
+      "fingerprint": "7257da5e791bb25ff741c16780509124876a8df9f0f76972fa4c06525851a4af",
+      "content_key": "ec7fe9d526595ae9"
+    },
+    "dev_L20_D1_004": {
+      "fingerprint": "bbd0ce5ee18df88b2f71a696d434344d08e3e90d60697e013cb23988019af53f",
+      "content_key": "fbd46c15e30b0b10"
+    },
+    "dev_L20_D3_000": {
+      "fingerprint": "290865d7e73792ebe6166e6ef79a1dfaed93c9f23925a8a821bbd042834e0d36",
+      "content_key": "94ca8fc6f0476514"
+    },
+    "dev_L20_D3_001": {
+      "fingerprint": "09081879c6ef496cb1f859ec1fa2912ee43bd9e5cb56d0be0041fce47155c31b",
+      "content_key": "123a41ec55de78bc"
+    },
+    "dev_L20_D3_002": {
+      "fingerprint": "c6469a13a72b7142972f0bab0ed1e2f81a747f34d22232640b14b1e354d3b46f",
+      "content_key": "87d945c8e47fe1da"
+    },
+    "dev_L20_D3_003": {
+      "fingerprint": "82bd9dcbbe66f0f3b12ed52ccee349e0232dea9dd3eed5c0a2c7a89a04849bc4",
+      "content_key": "3acce924160598b4"
+    },
+    "dev_L20_D3_004": {
+      "fingerprint": "5dbb089c5eaab3b4457fc941531f51266284f914a63d0530d660d1ad41848e16",
+      "content_key": "4cc84f341ea280c6"
+    },
+    "dev_L30_D0_000": {
+      "fingerprint": "5351c8a0e06b34006a8a8fb339bb607977b531a3457169c1eaaba85631053483",
+      "content_key": "3b90da754e095fac"
+    },
+    "dev_L30_D0_001": {
+      "fingerprint": "e057ac1ea3bf9e9367ccf40de794cc3dc13fd448592aa5ec6f34b279e8ac0547",
+      "content_key": "81890cd81abbdf06"
+    },
+    "dev_L30_D0_002": {
+      "fingerprint": "089b35c698f9519a19296d070395c7080c526e687ce6f521230616c4c877fcdb",
+      "content_key": "1aa495eda5a57a3d"
+    },
+    "dev_L30_D0_003": {
+      "fingerprint": "7ddc422e604a24625503e3df5a40c03319dcf6bcbc59e02074b9ecb737fae29e",
+      "content_key": "2dc6f4bff2ec7930"
+    },
+    "dev_L30_D0_004": {
+      "fingerprint": "58406ed550f48d4fc36a0ded3ca72a2183771e82bb60e098e407ab80182d1c06",
+      "content_key": "9f08d399dd69696d"
+    },
+    "dev_L30_D1_000": {
+      "fingerprint": "bd959d6d12bc1444e8764ebc81f47817db08c7e8900e1a5b0e4a8136800a4f1e",
+      "content_key": "6e184dcbfb3310c7"
+    },
+    "dev_L30_D1_001": {
+      "fingerprint": "3a2be4241a2659f838212ac1c98fac50416e4106cd931e3cce482422fdeab3f2",
+      "content_key": "3c93f405952e4dbf"
+    },
+    "dev_L30_D1_002": {
+      "fingerprint": "290c6ebafd4edb40e06a954b3909b8a5495b31b64e58cad342d3d5c23c09a191",
+      "content_key": "ab2239f1c2136882"
+    },
+    "dev_L30_D1_003": {
+      "fingerprint": "6ab37a7e5e15c13691559477f3e30fc6e8fcb16cc6497fd0974b3655e50fecd2",
+      "content_key": "0fe9c8660173fd67"
+    },
+    "dev_L30_D1_004": {
+      "fingerprint": "8bc1904bf5772cd5e272c8ff6997b1698d06f6b9c3df570dda063731f446af8b",
+      "content_key": "f0b8432f38a79b51"
+    },
+    "dev_L30_D3_000": {
+      "fingerprint": "cbf064c0d0d533288c362bf9e0913916b439e9112ceaa8a491627925a954cfab",
+      "content_key": "9c3facbf1c322f06"
+    },
+    "dev_L30_D3_001": {
+      "fingerprint": "28db13471a473a4d3dede3af000344b424825feab29f60ac22ae1eedf5028069",
+      "content_key": "5a76f515c4fa8fdf"
+    },
+    "dev_L30_D3_002": {
+      "fingerprint": "5ab0be8b9fca9d779233e2670ec00f52838f4771dfe80593a7df2369db5e0dfa",
+      "content_key": "ecae247f9a62663c"
+    },
+    "dev_L30_D3_003": {
+      "fingerprint": "d6adaad495e420d113c077db9ba030e52f9bd187916b01250e64918e634780fc",
+      "content_key": "64948092a728423c"
+    },
+    "dev_L30_D3_004": {
+      "fingerprint": "f77f0eb77bd434182ff3f5128953434691785a55818a7c35cb3bfee639fc4fe1",
+      "content_key": "e7607be64a7ddfc2"
+    }
+  }
+}

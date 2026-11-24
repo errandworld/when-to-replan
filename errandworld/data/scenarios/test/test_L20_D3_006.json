@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "id": "test_L20_D3_006",
+  "seed": 989321812,
+  "set_name": "test",
+  "length_level": 20,
+  "disruption_level": 3,
+  "capacity": 3,
+  "start_location": "ashford",
+  "optimal_actions": 18,
+  "total_subgoals": 8,
+  "reference_actions": 28,
+  "map": {
+    "id": "test_map_2",
+    "seed": 2002,
+    "locations": [
+      {
+        "id": "ashford",
+        "name": "Ashford"
+      },
+      {
+        "id": "birchwood",
+        "name": "Birchwood"
+      },
+      {
+        "id": "dunmore",
+        "name": "Dunmore"
+      },
+      {
+        "id": "eastbrook",
+        "name": "Eastbrook"
+      },
+      {
+        "id": "ironbridge",
+        "name": "Ironbridge"
+      },
+      {
+        "id": "juniper",
+        "name": "Juniper"
+      },
+      {
+        "id": "kingsley",
+        "name": "Kingsley"
+      },
+      {
+        "id": "northgate",
+        "name": "Northgate"
+      },
+      {
+        "id": "oakridge",
+        "name": "Oakridge"
+      },
+      {
+        "id": "pinecrest",
+        "name": "Pinecrest"
+      },
+      {
+        "id": "queensway",
+        "name": "Queensway"
+      },
+      {
+        "id": "riverton",
+        "name": "Riverton"
+      },
+      {
+        "id": "stonehill",
+        "name": "Stonehill"
+      },
+      {
+        "id": "yarrow",
+        "name": "Yarrow"
+      },
+      {
+        "id": "zephyr",
+        "name": "Zephyr"
+      }
+    ],
+    "roads": [
+      {
+        "a": "ashford",
+        "b": "dunmore",
+        "open": true
+      },
+      {
+        "a": "ashford",
+        "b": "eastbrook",
+        "open": true
+      },
+      {
+        "a": "ashford",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "kingsley",
+        "open": true
+      },
+      {
+        "a": "birchwood",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "dunmore",
+        "b": "northgate",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "juniper",
+        "open": true
+      },
+      {
+        "a": "eastbrook",
+        "b": "queensway",
+        "open": true
+      },
+      {
+        "a": "ironbridge",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "ironbridge",
+        "b": "yarrow",
+        "open": true
+      },
+      {
+        "a": "juniper",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "juniper",
+        "b": "zephyr",
+        "open": true
+      },
+      {
+        "a": "kingsley",
+        "b": "stonehill",
+        "open": true
+      },
+      {
+        "a": "northgate",
+        "b": "pinecrest",
+        "open": true
+      },
+      {
+        "a": "northgate",
+        "b": "riverton",
+        "open": true
+      },
+      {
+        "a": "oakridge",
+        "b": "pinecrest",
+        "open": true
+      },
+      {
+        "a": "oakridge",
+        "b": "zephyr",
+        "open": true
+      },
+      {
+        "a": "queensway",
+        "b": "stonehill",
+        "open": true
+      }
+    ],
+    "stations": [
+      {
+        "id": "oven_1",
+        "type": "oven",
+        "location": "ironbridge",
+        "online": true
+      },
+      {
+        "id": "oven_2",
+        "type": "oven",
+        "location": "eastbrook",
+        "online": true
+      },
+      {
+        "id": "print_shop_1",
+        "type": "print_shop",
+        "location": "kingsley",
+        "online": true
+      },
+      {
+        "id": "print_shop_2",
+        "type": "print_shop",
+        "location": "yarrow",
+        "online": true
+      },
+      {
+        "id": "repair_bench_1",
+        "type": "repair_bench",
+        "location": "dunmore",
+        "online": true
+      },
+      {
+        "id": "repair_bench_2",
+        "type": "repair_bench",
+        "location": "queensway",
+        "online": true
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "antenna_1",
+      "type": "antenna",
+      "location": "ironbridge"
+    },
+    {
+      "id": "paper_1",
+      "type": "paper",
+      "location": "ironbridge"
+    },
+    {
+      "id": "ink_1",
+      "type": "ink",
+      "location": "ironbridge"
+    },
+    {
+      "id": "sugar_1",
+      "type": "sugar",
+      "location": "yarrow"
+    },
+    {
+      "id": "lamp_base_1",
+      "type": "lamp_base",
+      "location": "oakridge"
+    },
+    {
+      "id": "card_1",
+      "type": "card",
+      "location": "pinecrest"
+    },
+    {
+      "id": "battery_1",
+      "type": "battery",
+      "location": "zephyr"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job_1",
+      "kind": "deliver",
+      "target_type": "antenna",
+      "destination": "northgate",
+      "depends_on": []
+    },
+    {
+      "id": "job_2",
+      "kind": "craft",
+      "target_type": "poster",
+      "destination": "dunmore",
+      "depends_on": []
+    },
+    {
+      "id": "job_3",
+      "kind": "deliver",
+      "target_type": "sugar",
+      "destination": "stonehill",
+      "depends_on": []
+    }
+  ],
+  "schedule": [
+    {
+      "index": 0,
+      "type": "station_offline",
+      "trigger_subgoal": 2
+    },
+    {
+      "index": 1,
+      "type": "stale_map",
+      "trigger_subgoal": 4
+    },
+    {
+      "index": 2,
+      "type": "road_closure",
+      "trigger_subgoal": 6
+    }
+  ],
+  "metadata": {
+    "generator_version": 4,
+    "attempt": 0,
+    "rejections": {},
+    "radius": 4,
+    "composition": {
+      "jobs": 3,
+      "deliver": 2,
+      "craft": 1,
+      "dependent": 0
+    },
+    "solve_seconds_total": 0.001,
+    "solve_expanded": 30,
+    "disruption_order_changed": true,
+    "reference_replay": [
+      {
+        "index": 0,
+        "type": "station_offline",
+        "target": "station:print_shop_2",
+        "cost_before": 14,
+        "cost_after": 19,
+        "affected_jobs": [
+          "job_2"
+        ]
+      },
+      {
+        "index": 1,
+        "type": "stale_map",
+        "target": "item:sugar_1",
+        "cost_before": 14,
+        "cost_after": 16,
+        "affected_jobs": [
+          "job_3"
+        ]
+      },
+      {
+        "index": 2,
+        "type": "road_closure",
+        "target": "road:dunmore|northgate",
+        "cost_before": 7,
+        "cost_after": 10,
+        "affected_jobs": [
+          "job_2"
+        ]
+      }
+    ]
+  }
+}
