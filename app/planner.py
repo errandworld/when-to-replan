@@ -14,6 +14,7 @@ from app.checker import Trigger
 from app.plan import Plan, PlanError, PlanStep, parse_plan, plan_schema
 from app.prompts import load
 from app.types import LLMResult, ToolResult
+from app.loops.react import observation_text
 
 # How a plan is requested: "schema" sends the plan's JSON schema, "json" asks only for a JSON
 # object, for models that cannot take a schema, and None sends no response format at all.
@@ -123,14 +124,13 @@ def render_tools(tool_definitions: list[dict[str, Any]]) -> str:
 
 
 def render_results(results: Sequence[ToolResult]) -> str:
-    """One line per tool result, numbered by position, showing what ReAct's tool messages show."""
+    """One entry per tool result, numbered by position, showing what ReAct's tool messages show."""
+    from app.loops.react import observation_text    
     lines = []
     for index, result in enumerate(results):
-        observation: dict[str, Any] = {"ok": result.ok}
-        if result.error:
-            observation["error"] = result.error
-        observation.update({k: v for k, v in result.payload.items() if k not in observation})
-        lines.append(f"[{index}] {result.tool} {json.dumps(result.args)} -> {json.dumps(observation)}")
+        lines.append(
+            f"[{index}] {result.tool} {json.dumps(result.args)} -> {observation_text(result)}"
+        )
     return "\n".join(lines) or "(none)"
 
 

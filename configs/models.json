@@ -1,0 +1,18 @@
+{
+  "_note": "VERIFY every id below with `python -m app.llm <litellm name>` and paste the version string the API returns into pinned_version. FP2 writes the nemotron id as '...-vl-120b...', FP3 and example.env write '...-v1-120b...': one of them is a typo.",
+  "gemini-flash-lite": {
+    "litellm": "gemini/gemini-3.5-flash-lite",
+    "response_format": "schema",
+    "pinned_version": null
+  },
+  "nemotron-120b": {
+    "litellm": "nvidia_nim/nvidia/nemotron-3.5-super-v1-120b-a12b",
+    "response_format": "schema",
+    "pinned_version": null
+  },
+  "qwen-27b": {
+    "litellm": "ollama/qwen3.8:27b",
+    "response_format": "json",
+    "pinned_version": null
+  }
+}

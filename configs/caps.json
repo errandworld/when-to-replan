@@ -1,0 +1,6 @@
+{
+  "_note": "Token caps. Null means uncapped, which is what the pilot must run with (FP3 10.3). Fill with `python -m runner.derive_caps` after the pilot. Key by length (L10) or by cell (L10_D3); a cell key wins. See D8 in errandworld/ARCHITECTURE.md for why per-cell may be needed.",
+  "L10": null,
+  "L20": null,
+  "L30": null
+}

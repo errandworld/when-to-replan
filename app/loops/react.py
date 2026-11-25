@@ -90,13 +90,17 @@ def _assistant_message(reply: LLMResult) -> dict[str, Any]:
 
 
 def _tool_message(call: ToolCall, result: ToolResult) -> dict[str, Any]:
-    observation = {"ok": result.ok}
+    return {"role": "tool", "tool_call_id": call.id, "content": observation_text(result)}
+
+
+def observation_text(result: ToolResult) -> str:
+    """What the model reads for one tool result: the server's text when it sent one, otherwise
+    the ok flag, error code and payload as JSON (stand-in servers that have no text)."""
+    if result.text:
+        return result.text
+    observation: dict[str, Any] = {"ok": result.ok}
     
     if result.error:
         observation["error"] = result.error
     observation.update({k: v for k, v in result.payload.items() if k not in observation})
-    return {
-        "role": "tool",
-        "tool_call_id": call.id,
-        "content": json.dumps(observation),
-    }
+    return json.dumps(observation)
