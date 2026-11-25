@@ -54,6 +54,7 @@ class ToolResult:
     error: str | None = None  # one of ERROR_CODES when ok is False
     payload: dict[str, Any] = field(default_factory=dict)
     latency_s: float = 0.0
+    text: str = ""  # what the model reads; empty for stand-ins that only have a payload
 
     @property
     def is_write(self) -> bool:

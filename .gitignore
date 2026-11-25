@@ -4,6 +4,14 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+.venv*/
 .pytest_cache/
+*.egg-info/
 
 .DS_Store
+
+# Raw scratch from the server process of each episode. The merged trace.json is what we keep.
+results/**/server/
+# Pilot and dev results ARE committed (FP3 13.1 wants saved pilot traces). Ignore only scratch runs.
+results/tmp/
+runs/
