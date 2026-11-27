@@ -1,11 +1,11 @@
 {
   "_note": "USD per million tokens, from each provider's list price on `date`. Open-weight models use a hosted provider's list price (FP2 4.5). Freeze by not editing after the pilot.",
-  "date": null,
+  "date": "2026-11-27",
   "models": {
     "gemini-flash-lite": {
-      "input": null,
-      "cached_input": null,
-      "output": null
+      "input": 0.30,
+      "cached_input": 0.03,
+      "output": 2.50
     },
     "nemotron-120b": { "input": null, "cached_input": null, "output": null },
     "qwen-27b": { "input": null, "cached_input": null, "output": null }

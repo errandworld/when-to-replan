@@ -3,7 +3,7 @@
   "gemini-flash-lite": {
     "litellm": "gemini/gemini-3.5-flash-lite",
     "response_format": "schema",
-    "pinned_version": null
+    "pinned_version": "gemini-3.5-flash-lite"
   },
   "nemotron-120b": {
     "litellm": "nvidia_nim/nvidia/nemotron-3.5-super-v1-120b-a12b",
