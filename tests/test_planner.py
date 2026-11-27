@@ -135,21 +135,21 @@ def test_rewrite_request():
     assert "replaces the rest of the current plan" in content
 
 
-def test_repair_request_states_the_cap():
+def test_repair_request_splits_the_broken_step_from_the_frozen_rest_and_states_no_cap():
     p, llm, _ = planner([plan_text(("move", {"location": "park"}))])
-    p.repair(history=OBSERVED, remaining=REMAINING, first=2, trigger=FAILED, max_writes=3)
+    p.repair(history=OBSERVED, remaining=REMAINING, first=2, trigger=FAILED)
 
     content = llm.calls[0][1]["content"]
     failed = content.split("## The step to repair")[1].split("##")[0]
     frozen = content.split("will run unchanged after your repair")[1]
     assert 'step 2: {"tool": "move"' in failed and "pick" not in failed
     assert 'step 3: {"tool": "pick"' in frozen
-    assert "Use at most 3 write actions" in content
+    assert "at most" not in content and "{limit}" not in content  # the cap is hidden state
 
 
-def test_repair_request_without_a_cap():
+def test_repair_request_with_no_history_and_nothing_frozen():
     p, llm, _ = planner([plan_text()])
-    p.repair(history=[], remaining=REMAINING[:1], first=0, trigger=FAILED, max_writes=None)
+    p.repair(history=[], remaining=REMAINING[:1], first=0, trigger=FAILED)
 
     content = llm.calls[0][1]["content"]
     assert "at most" not in content

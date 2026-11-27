@@ -21,4 +21,4 @@ Each line is one tool call and its result, numbered in order.
 {frozen}
 
 Write steps that replace only the step to repair, so that the rest of the plan can carry on as it
-is. {limit}Your steps run in its place; do not repeat the steps that follow it.
+is. Your steps run in its place; do not repeat the steps that follow it.

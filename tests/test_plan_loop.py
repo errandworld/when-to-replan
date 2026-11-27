@@ -149,7 +149,7 @@ def test_repair_is_capped_at_the_minimum_plus_two():
                           tools=tools, repair_limit=repair_limit)
 
     assert seen == [("move", {"location": "shop"}, "road_closed")]
-    assert "Use at most 3 write actions" in llm.calls[1][1]["content"]
+    assert "at most" not in llm.calls[1][1]["content"]  # cut afterwards, never stated
     [event] = outcome.revisions
     assert event.write_cap == 3 and event.cut == 2
     assert called(tools)[-5:] == [("move", "a"), ("look", None), ("move", "b"), ("move", "c"), ("look", None)]
