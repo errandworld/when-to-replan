@@ -115,10 +115,15 @@ def test_strips_precondition_values():
 
 def test_schema_follows_the_tool_definitions():
     schema = plan_schema(TOOLS)
-    step_schema = schema["properties"]["steps"]["items"]
-    assert step_schema["properties"]["tool"]["enum"] == [t["function"]["name"] for t in TOOLS]
-    assert set(step_schema["properties"]["args"]["properties"]) == {"location", "item", "station", "items"}
-    variants = step_schema["properties"]["preconditions"]["items"]["anyOf"]
+    steps = schema["properties"]["steps"]["items"]["anyOf"]
+    assert [s["properties"]["tool"]["enum"] for s in steps] == [[t["function"]["name"]] for t in TOOLS]
+    for variant, definition in zip(steps, TOOLS):
+        parameters = definition["function"]["parameters"]
+        args = variant["properties"]["args"]
+        assert set(args["properties"]) == set(parameters["properties"])  # only its own arguments
+        assert args["required"] == parameters.get("required", [])  # and all of them are required
+        assert variant["required"] == ["tool", "args", "preconditions"]
+    variants = steps[0]["properties"]["preconditions"]["items"]["anyOf"]
     assert [v["properties"]["type"]["enum"] for v in variants] == [[kind] for kind in PRECONDITION_FIELDS]
     for variant, (kind, names) in zip(variants, PRECONDITION_FIELDS.items()):
         assert variant["required"] == ["type", *names]  # each type requires its own fields

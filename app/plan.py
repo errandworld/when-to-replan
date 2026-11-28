@@ -67,15 +67,11 @@ class Plan:
 def plan_schema(tool_definitions: list[dict[str, Any]]) -> dict[str, Any]:
     """The JSON schema of a plan reply, built from the tool definitions the server lists.
 
-    A step's args take the union of every tool's parameters, because some providers reject
-    per-tool variants; parse_plan then checks each step against its own tool. Preconditions
-    are one variant per type, each requiring its own fields: with a single shared object,
-    constrained decoding let models write a field from another type (item_at with "to").
+    One variant per tool, each requiring that tool's own arguments, and one precondition
+    variant per type, each requiring its own fields. A single shared object for either let
+    constrained decoding leave out a required argument (use without items) or write a field
+    from another precondition type (item_at with "to").
     """
-    arg_properties: dict[str, Any] = {}
-    for definition in tool_definitions:
-        arg_properties.update(_parameters(definition).get("properties", {}))
-
     precondition_variants = [
         {
             "type": "object",
@@ -88,20 +84,28 @@ def plan_schema(tool_definitions: list[dict[str, Any]]) -> dict[str, Any]:
         for kind, names in PRECONDITION_FIELDS.items()
     ]
 
-    step = {
-        "type": "object",
-        "properties": {
-            "tool": {"type": "string", "enum": [_name(d) for d in tool_definitions]},
-            "args": {"type": "object", "properties": arg_properties},
-            "preconditions": {"type": "array", "items": {"anyOf": precondition_variants}},
-        },
-        "required": ["tool", "args", "preconditions"],
-    }
+    step_variants = [
+        {
+            "type": "object",
+            "properties": {
+                "tool": {"type": "string", "enum": [_name(definition)]},
+                "args": {
+                    "type": "object",
+                    "properties": _parameters(definition).get("properties", {}),
+                    "required": _parameters(definition).get("required", []),
+                },
+                "preconditions": {"type": "array", "items": {"anyOf": precondition_variants}},
+            },
+            "required": ["tool", "args", "preconditions"],
+        }
+        for definition in tool_definitions
+    ]
+
     return {
         "type": "object",
         "properties": {
             "reasoning": {"type": "string"},
-            "steps": {"type": "array", "items": step},
+            "steps": {"type": "array", "items": {"anyOf": step_variants}},
         },
         "required": ["steps"],
     }
@@ -144,7 +148,7 @@ def _parse_step(
         warnings.append(f"{where}: dropped arguments {dropped}, which {tool} does not take")
     missing = [n for n in tools[tool].get("required", []) if _empty(kept.get(n))]
     if missing:
-        raise PlanError(f"{where}: {tool} needs {', '.join(missing)}")
+        raise PlanError(f"{where}: {tool} needs {', '.join(missing)}; got {json.dumps(raw)}")
 
     raw_preconditions = raw.get("preconditions") or []
     if not isinstance(raw_preconditions, list):
