@@ -2,19 +2,32 @@
 from __future__ import annotations
 
 import json
+import os
+import random
 import time
 from typing import Any
 
 from app.types import LLMResult, ToolCall
+
+RATE_LIMIT_RETRIES = 5  # a 429 is waited out instead of ending the episode
 
 
 class LiteLLM:
     """One model, called with a fixed temperature. Model names are LiteLLM's, for example
     "gemini/gemini-3.5-flash-lite" or "ollama/qwen3.8:27b"."""
 
-    def __init__(self, model: str, temperature: float = 0.0):
+    def __init__(
+        self,
+        model: str,
+        temperature: float = 0.0,
+        requests_per_minute: "float | None" = None,
+    ):
         self.model = model
         self.temperature = temperature
+        if requests_per_minute is None and os.environ.get("LLM_RPM"):
+            requests_per_minute = float(os.environ["LLM_RPM"])
+        self.min_interval_s = 60.0 / requests_per_minute if requests_per_minute else 0.0
+        self._next_slot = 0.0
         self._takes_temperature: bool | None = None
 
     def complete(
@@ -34,10 +47,26 @@ class LiteLLM:
         if response_format is not None:
             kwargs["response_format"] = response_format
 
-        start = time.perf_counter()
-        response = litellm.completion(**kwargs)
-        return _to_result(response, time.perf_counter() - start)
+        for attempt in range(RATE_LIMIT_RETRIES + 1):
+            self._wait_for_slot()
+            start = time.perf_counter()
+            try:
+                response = litellm.completion(**kwargs)
+            except litellm.RateLimitError:
+                if attempt == RATE_LIMIT_RETRIES:
+                    raise
+                time.sleep(min(2 ** attempt, 60) + random.random())
+            else:
+                return _to_result(response, time.perf_counter() - start)
 
+    def _wait_for_slot(self) -> None:
+        """Holds calls 60 / LLM_RPM apart, and does nothing when LLM_RPM is unset. The wait sits
+        outside the timer, so latency_s measures only the call that succeeded."""
+        if self.min_interval_s:
+            wait = self._next_slot - time.monotonic()
+            if wait > 0:
+                time.sleep(wait)
+        self._next_slot = time.monotonic() + self.min_interval_s
 
     @property
     def takes_temperature(self) -> bool:
