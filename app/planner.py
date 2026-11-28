@@ -76,15 +76,11 @@ class Planner:
         remaining: Sequence[PlanStep],
         first: int,
         trigger: Trigger,
-        max_writes: int | None,
     ) -> Plan:
-        """Steps to replace only `remaining[0]`, the rest staying as they are. `max_writes` is
-        stated in the request; enforcing it is the caller's job."""
-        limit = (
-            ""
-            if max_writes is None
-            else f"Use at most {max_writes} write actions (move, pick, drop, use); any beyond that are cut. "
-        )
+        """Steps to replace only `remaining[0]`, the rest staying as they are.
+
+        The request never states a write cap: the cap comes from hidden world state
+        (`app/repair.py`), so the caller cuts a long repair afterwards instead."""
         return self._request(
             load(
                 "plan_repair",
@@ -93,7 +89,6 @@ class Planner:
                 trigger=describe(trigger, remaining[0] if remaining else None),
                 failed=render_steps(remaining[:1], first),
                 frozen=render_steps(remaining[1:], first + 1),
-                limit=limit,
             )
         )
 

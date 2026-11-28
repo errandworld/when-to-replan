@@ -193,6 +193,10 @@ def run_episode(spec: RunSpec, *, llm: Any, response_format: Any = "schema") -> 
         llm_seconds=round(sum(c.latency_s for c in calls), 3),
         tool_seconds=summary["tool_seconds"], injector_seconds=summary["injector_seconds"],
         revisions=len(outcome.revisions),
+        # Local repair's hidden write cap: repairs it applied to, repairs it cut, steps it removed.
+        repairs_capped=sum(r.write_cap is not None for r in outcome.revisions),
+        repairs_truncated=sum(r.cut > 0 for r in outcome.revisions),
+        steps_cut=sum(r.cut for r in outcome.revisions),
         recoverable_disruptions=sum(r["recovered"] is not None for r in trace["m5"]["recovery"]),
         recovered_disruptions=sum(r["recovered"] is True for r in trace["m5"]["recovery"]),
         final_output=outcome.final_output[:500],

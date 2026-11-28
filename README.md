@@ -40,6 +40,7 @@ python -m runner.run --set pilot --model gemini-flash-lite --per-cell 2 --uncapp
 python -m runner.run --set pilot --model gemini-flash-lite --per-cell 2 --uncapped
 python -m runner.derive_caps                            # 1.5 x median ReAct tokens -> configs/caps.json
 python -m metrics.summarize results/gemini-flash-lite   # success, delta with CI, cost per success
+python -m metrics.repair_stats results/gemini-flash-lite  # how often local repair's hidden cap cut a repair
 ```
 
 Strategy (`--strategy react adaptive local_repair`), model, set and run count are all command-line choices.

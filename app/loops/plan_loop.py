@@ -8,6 +8,10 @@ fires, the executor makes the fixed revision reads and the model is called once 
     revision_scope="step"       local repair replaces only the broken step, capped at the
                                 solver's minimum plus two write actions; the rest stays frozen
 
+The repair cap is never shown to the model, since it is computed from hidden world state. A
+repair with more write steps than the cap is cut after the reply, and the cut is recorded on its
+RevisionEvent.
+
 Everything else, the planner, the checker, the prompts and the reads, is shared, so any
 difference between the two conditions comes from the scope alone.
 """
@@ -187,7 +191,6 @@ class _Episode:
                 remaining=remaining,
                 first=cursor,
                 trigger=trigger,
-                max_writes=cap,
             )
             patch = _within_cap(plan.steps, cap)
             cut = len(plan.steps) - len(patch)
